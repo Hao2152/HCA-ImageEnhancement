@@ -1,0 +1,1441 @@
+2026-10-19 23:44:22,918 | =====> Ablation Experiment Tag: [LDS_FDS] | Args: Namespace(lds=True, lds_kernel='gaussian', lds_ks=5, lds_sigma=1.0, fds=True, fds_kernel='gaussian', fds_ks=5, fds_sigma=1.0, start_update=0, start_smooth=1, bucket_num=20, bucket_start=0, fds_mmt=0.9, reweight='sqrt_inv', tol=0.3, csv_path='./alpha_data.csv', raw_csv_path='./ALL_Best_Summary_ExtendedFeatures_Advanced.csv', data_dir='E:\\1RLabeling_Images_Denoised', batch_size=32, epochs=45, lr=0.0008, backbone_lr=5e-05, feat_dim=64, dropout=0.4, temp=0.35, print_freq=10, img_size=224, workers=4, resume='', evaluate_only=False, plot_head='combmul', save_dir='./checkpoints_ablation_lds_fds', log_dir='analy_hca_lds_log', log_name='ablation_hca_lds.log', head_num=4)
+2026-10-19 23:44:22,974 | Using re-weighting: [SQRT_INV]
+2026-10-19 23:44:22,975 | Using LDS: [GAUSSIAN] (5/1.0)
+2026-10-19 23:44:23,205 | Using FDS: [GAUSSIAN] (5/1.0)
+2026-10-19 23:44:23,537 | Loaded 318 ImageNet pretrained backbone tensors.
+2026-10-19 23:44:45,369 | Epoch: [1][ 0/49]	Time 21.794 (21.794)	Loss (Total) 28.5250 (28.5250)
+2026-10-19 23:44:52,009 | Epoch: [1][10/49]	Time  0.104 ( 2.585)	Loss (Total) 24.8852 (25.4500)
+2026-10-19 23:45:02,673 | Epoch: [1][20/49]	Time  2.978 ( 1.862)	Loss (Total) 18.7725 (23.9397)
+2026-10-19 23:45:11,478 | Epoch: [1][30/49]	Time  2.952 ( 1.545)	Loss (Total) 18.0156 (22.4066)
+2026-10-19 23:45:21,168 | Epoch: [1][40/49]	Time  0.107 ( 1.405)	Loss (Total) 16.0034 (21.3004)
+2026-10-19 23:45:29,199 | Updated running statistics with Epoch [0] features!
+2026-10-19 23:45:50,015 | Val Epoch 1: [0/7]	Time 20.815 (20.815)	Center_MSE 0.1573 (0.1573)
+2026-10-19 23:45:53,555 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4617)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      61.73%&	    69.65%&	    57.81%&	    76.82%&	    63.33%&
+     Tube_L1&	      0.1074&	    0.0673&	    0.1382&	    0.0517&	    0.0450&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    79.33%&	    73.76%&	    75.00%&	    93.33%&
+     Tube_L1&	      0.0696&	    0.0792&	    0.1343&	    0.0916&	    0.0080&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      63.78%&	    72.57%&	    61.18%&	    76.36%&	    73.33%&
+     Tube_L1&	      0.0972&	    0.0635&	    0.1321&	    0.0477&	    0.0433&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      63.27%&	    71.52%&	    60.95%&	    74.55%&	    73.33%&
+     Tube_L1&	      0.0958&	    0.0625&	    0.1279&	    0.0502&	    0.0373&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:45:53,680 | ===> [LDS_FDS] Saved new best model at Epoch 1 | Val combmul Raw_Acc: 63.27% | Bal_Acc: 71.52% | Center_RMSE: 0.4617
+2026-10-19 23:45:53,686 | Updated smoothed statistics on Epoch [1]!
+2026-10-19 23:45:56,681 | Epoch: [2][ 0/49]	Time  2.995 ( 2.995)	Loss (Total) 19.3881 (19.3881)
+2026-10-19 23:46:05,439 | Epoch: [2][10/49]	Time  0.760 ( 1.068)	Loss (Total) 19.5730 (16.4515)
+2026-10-19 23:46:14,144 | Epoch: [2][20/49]	Time  0.830 ( 0.974)	Loss (Total) 15.8754 (15.8857)
+2026-10-19 23:46:23,493 | Epoch: [2][30/49]	Time  0.124 ( 0.961)	Loss (Total) 14.6593 (15.7732)
+2026-10-19 23:46:36,092 | Epoch: [2][40/49]	Time  3.645 ( 1.034)	Loss (Total) 13.0903 (15.5253)
+2026-10-19 23:46:41,441 | Updated running statistics with Epoch [1] features!
+2026-10-19 23:46:44,714 | Val Epoch 2: [0/7]	Time  3.273 ( 3.273)	Center_MSE 0.1009 (0.1009)
+2026-10-19 23:46:48,347 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4115)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    79.32%&	    75.33%&	    80.45%&	    80.00%&
+     Tube_L1&	      0.0715&	    0.0605&	    0.1111&	    0.0620&	    0.0167&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.73%&	    81.71%&	    81.88%&	    80.91%&	    83.33%&
+     Tube_L1&	      0.0633&	    0.0763&	    0.1056&	    0.0924&	    0.0177&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      78.06%&	    78.61%&	    71.81%&	    80.45%&	    80.00%&
+     Tube_L1&	      0.0709&	    0.0580&	    0.1099&	    0.0587&	    0.0147&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    78.88%&	    73.17%&	    80.45%&	    80.00%&
+     Tube_L1&	      0.0702&	    0.0588&	    0.1098&	    0.0618&	    0.0113&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:46:48,485 | ===> [LDS_FDS] Saved new best model at Epoch 2 | Val combmul Raw_Acc: 79.59% | Bal_Acc: 78.88% | Center_RMSE: 0.4115
+2026-10-19 23:46:48,487 | Updated smoothed statistics on Epoch [2]!
+2026-10-19 23:46:52,531 | Epoch: [3][ 0/49]	Time  4.044 ( 4.044)	Loss (Total) 13.2252 (13.2252)
+2026-10-19 23:47:00,131 | Epoch: [3][10/49]	Time  0.770 ( 1.059)	Loss (Total) 12.2859 (13.9654)
+2026-10-19 23:47:08,191 | Epoch: [3][20/49]	Time  0.120 ( 0.938)	Loss (Total) 15.6078 (13.7497)
+2026-10-19 23:47:19,152 | Epoch: [3][30/49]	Time  2.491 ( 0.989)	Loss (Total) 10.7947 (13.7116)
+2026-10-19 23:47:24,528 | Epoch: [3][40/49]	Time  0.120 ( 0.879)	Loss (Total) 14.3768 (13.6368)
+2026-10-19 23:47:32,350 | Updated running statistics with Epoch [2] features!
+2026-10-19 23:47:35,578 | Val Epoch 3: [0/7]	Time  3.227 ( 3.227)	Center_MSE 0.0923 (0.0923)
+2026-10-19 23:47:39,370 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4085)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    78.51%&	    75.48%&	    80.45%&	    76.67%&
+     Tube_L1&	      0.0717&	    0.0643&	    0.1076&	    0.0683&	    0.0210&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      88.78%&	    85.20%&	    87.27%&	    82.27%&	    90.00%&
+     Tube_L1&	      0.0607&	    0.0672&	    0.0983&	    0.0833&	    0.0070&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    81.01%&	    75.48%&	    80.45%&	    86.67%&
+     Tube_L1&	      0.0701&	    0.0583&	    0.1068&	    0.0638&	    0.0073&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    77.31%&	    77.78%&	    80.45%&	    70.00%&
+     Tube_L1&	      0.0710&	    0.0623&	    0.1080&	    0.0673&	    0.0147&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:47:39,505 | ===> [LDS_FDS] Saved new best model at Epoch 3 | Val combmul Raw_Acc: 81.12% | Bal_Acc: 77.31% | Center_RMSE: 0.4085
+2026-10-19 23:47:39,507 | Updated smoothed statistics on Epoch [3]!
+2026-10-19 23:47:43,339 | Epoch: [4][ 0/49]	Time  3.832 ( 3.832)	Loss (Total) 16.8300 (16.8300)
+2026-10-19 23:47:50,114 | Epoch: [4][10/49]	Time  0.120 ( 0.964)	Loss (Total) 14.3250 (14.1633)
+2026-10-19 23:47:58,674 | Epoch: [4][20/49]	Time  0.423 ( 0.913)	Loss (Total) 14.8654 (13.4432)
+2026-10-19 23:48:08,160 | Epoch: [4][30/49]	Time  0.145 ( 0.924)	Loss (Total) 13.9290 (13.5579)
+2026-10-19 23:48:17,909 | Epoch: [4][40/49]	Time  0.141 ( 0.937)	Loss (Total) 11.2164 (13.1088)
+2026-10-19 23:48:25,033 | Updated running statistics with Epoch [3] features!
+2026-10-19 23:48:28,257 | Val Epoch 4: [0/7]	Time  3.223 ( 3.223)	Center_MSE 0.1184 (0.1184)
+2026-10-19 23:48:31,753 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4306)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    75.41%&	    81.62%&	    78.64%&	    63.33%&
+     Tube_L1&	      0.0834&	    0.0709&	    0.1164&	    0.0690&	    0.0387&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.73%&	    83.88%&	    83.98%&	    84.09%&	    83.33%&
+     Tube_L1&	      0.0659&	    0.0648&	    0.1027&	    0.0765&	    0.0087&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    78.06%&	    77.40%&	    80.45%&	    73.33%&
+     Tube_L1&	      0.0787&	    0.0621&	    0.1135&	    0.0605&	    0.0247&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    76.66%&	    81.62%&	    80.91%&	    63.33%&
+     Tube_L1&	      0.0804&	    0.0665&	    0.1149&	    0.0637&	    0.0340&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:48:31,869 | ===> [LDS_FDS] Saved new best model at Epoch 4 | Val combmul Raw_Acc: 81.63% | Bal_Acc: 76.66% | Center_RMSE: 0.4306
+2026-10-19 23:48:31,872 | Updated smoothed statistics on Epoch [4]!
+2026-10-19 23:48:36,840 | Epoch: [5][ 0/49]	Time  4.968 ( 4.968)	Loss (Total) 10.1093 (10.1093)
+2026-10-19 23:48:44,573 | Epoch: [5][10/49]	Time  0.118 ( 1.155)	Loss (Total) 8.0470 (12.1242)
+2026-10-19 23:48:54,845 | Epoch: [5][20/49]	Time  3.441 ( 1.094)	Loss (Total) 14.8043 (12.1224)
+2026-10-19 23:49:03,173 | Epoch: [5][30/49]	Time  0.117 ( 1.010)	Loss (Total) 11.6374 (12.0366)
+2026-10-19 23:49:11,416 | Epoch: [5][40/49]	Time  1.754 ( 0.964)	Loss (Total) 11.4611 (12.0276)
+2026-10-19 23:49:16,695 | Updated running statistics with Epoch [4] features!
+2026-10-19 23:49:19,940 | Val Epoch 5: [0/7]	Time  3.244 ( 3.244)	Center_MSE 0.1062 (0.1062)
+2026-10-19 23:49:23,480 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4069)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    80.02%&	    82.99%&	    80.45%&	    76.67%&
+     Tube_L1&	      0.0691&	    0.0603&	    0.1054&	    0.0625&	    0.0193&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      87.24%&	    84.62%&	    84.36%&	    82.27%&	    90.00%&
+     Tube_L1&	      0.0613&	    0.0627&	    0.0995&	    0.0743&	    0.0080&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    80.76%&	    78.39%&	    80.45%&	    83.33%&
+     Tube_L1&	      0.0682&	    0.0549&	    0.1062&	    0.0568&	    0.0097&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    80.84%&	    78.77%&	    80.45%&	    83.33%&
+     Tube_L1&	      0.0698&	    0.0594&	    0.1073&	    0.0618&	    0.0160&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:49:23,599 | ===> [LDS_FDS] Saved new best model at Epoch 5 | Val combmul Raw_Acc: 83.16% | Bal_Acc: 80.84% | Center_RMSE: 0.4069
+2026-10-19 23:49:23,601 | Updated smoothed statistics on Epoch [5]!
+2026-10-19 23:49:28,799 | Epoch: [6][ 0/49]	Time  5.199 ( 5.199)	Loss (Total) 8.7544 (8.7544)
+2026-10-19 23:49:36,152 | Epoch: [6][10/49]	Time  0.122 ( 1.141)	Loss (Total) 13.3093 (12.1238)
+2026-10-19 23:49:47,101 | Epoch: [6][20/49]	Time  2.530 ( 1.119)	Loss (Total) 8.4253 (12.2832)
+2026-10-19 23:49:53,541 | Epoch: [6][30/49]	Time  0.120 ( 0.966)	Loss (Total) 11.3499 (12.1243)
+2026-10-19 23:50:05,350 | Epoch: [6][40/49]	Time  3.355 ( 1.018)	Loss (Total) 7.2712 (11.6825)
+2026-10-19 23:50:13,434 | Updated running statistics with Epoch [5] features!
+2026-10-19 23:50:16,663 | Val Epoch 6: [0/7]	Time  3.228 ( 3.228)	Center_MSE 0.1161 (0.1161)
+2026-10-19 23:50:20,254 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4026)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    77.93%&	    80.92%&	    80.45%&	    70.00%&
+     Tube_L1&	      0.0652&	    0.0622&	    0.1052&	    0.0536&	    0.0467&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.22%&	    81.64%&	    81.12%&	    84.09%&	    76.67%&
+     Tube_L1&	      0.0569&	    0.0605&	    0.1023&	    0.0607&	    0.0267&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    78.43%&	    78.39%&	    82.27%&	    70.00%&
+     Tube_L1&	      0.0620&	    0.0545&	    0.1045&	    0.0470&	    0.0313&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    77.55%&	    79.00%&	    80.45%&	    70.00%&
+     Tube_L1&	      0.0641&	    0.0595&	    0.1057&	    0.0489&	    0.0457&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:50:20,256 | Updated smoothed statistics on Epoch [6]!
+2026-10-19 23:50:24,313 | Epoch: [7][ 0/49]	Time  4.057 ( 4.057)	Loss (Total) 10.5147 (10.5147)
+2026-10-19 23:50:31,291 | Epoch: [7][10/49]	Time  0.190 ( 1.003)	Loss (Total) 12.7031 (11.7400)
+2026-10-19 23:50:43,892 | Epoch: [7][20/49]	Time  4.567 ( 1.125)	Loss (Total) 9.0925 (11.5152)
+2026-10-19 23:50:52,469 | Epoch: [7][30/49]	Time  0.117 ( 1.039)	Loss (Total) 12.7743 (11.3195)
+2026-10-19 23:51:02,801 | Epoch: [7][40/49]	Time  4.190 ( 1.038)	Loss (Total) 10.6047 (11.1489)
+2026-10-19 23:51:10,410 | Updated running statistics with Epoch [6] features!
+2026-10-19 23:51:13,696 | Val Epoch 7: [0/7]	Time  3.284 ( 3.284)	Center_MSE 0.0899 (0.0899)
+2026-10-19 23:51:17,321 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.3903)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    80.23%&	    86.13%&	    82.73%&	    70.00%&
+     Tube_L1&	      0.0592&	    0.0649&	    0.0965&	    0.0609&	    0.0487&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      89.29%&	    84.20%&	    87.65%&	    86.36%&	    76.67%&
+     Tube_L1&	      0.0532&	    0.0645&	    0.0935&	    0.0681&	    0.0333&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    79.18%&	    80.92%&	    82.73%&	    70.00%&
+     Tube_L1&	      0.0573&	    0.0577&	    0.0957&	    0.0520&	    0.0400&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    78.10%&	    83.83%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0594&	    0.0634&	    0.0977&	    0.0562&	    0.0517&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:51:17,452 | ===> [LDS_FDS] Saved new best model at Epoch 7 | Val combmul Raw_Acc: 84.18% | Bal_Acc: 78.10% | Center_RMSE: 0.3903
+2026-10-19 23:51:17,455 | Updated smoothed statistics on Epoch [7]!
+2026-10-19 23:51:22,252 | Epoch: [8][ 0/49]	Time  4.797 ( 4.797)	Loss (Total) 11.9545 (11.9545)
+2026-10-19 23:51:29,440 | Epoch: [8][10/49]	Time  0.710 ( 1.089)	Loss (Total) 9.4162 (10.5167)
+2026-10-19 23:51:38,888 | Epoch: [8][20/49]	Time  1.430 ( 1.021)	Loss (Total) 14.0272 (10.9308)
+2026-10-19 23:51:49,000 | Epoch: [8][30/49]	Time  0.134 ( 1.018)	Loss (Total) 9.3356 (11.0386)
+2026-10-19 23:51:55,638 | Epoch: [8][40/49]	Time  1.262 ( 0.931)	Loss (Total) 11.0048 (10.8892)
+2026-10-19 23:52:01,740 | Updated running statistics with Epoch [7] features!
+2026-10-19 23:52:04,976 | Val Epoch 8: [0/7]	Time  3.235 ( 3.235)	Center_MSE 0.0705 (0.0705)
+2026-10-19 23:52:08,563 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.3828)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.22%&	    79.74%&	    84.97%&	    82.27%&	    70.00%&
+     Tube_L1&	      0.0585&	    0.0655&	    0.0967&	    0.0623&	    0.0477&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      87.76%&	    82.79%&	    81.88%&	    85.91%&	    76.67%&
+     Tube_L1&	      0.0535&	    0.0627&	    0.0980&	    0.0637&	    0.0320&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    78.63%&	    79.38%&	    82.27%&	    70.00%&
+     Tube_L1&	      0.0571&	    0.0587&	    0.0965&	    0.0565&	    0.0333&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    79.36%&	    83.05%&	    82.27%&	    70.00%&
+     Tube_L1&	      0.0589&	    0.0637&	    0.0975&	    0.0596&	    0.0457&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:52:08,701 | ===> [LDS_FDS] Saved new best model at Epoch 8 | Val combmul Raw_Acc: 85.71% | Bal_Acc: 79.36% | Center_RMSE: 0.3828
+2026-10-19 23:52:08,703 | Updated smoothed statistics on Epoch [8]!
+2026-10-19 23:52:13,973 | Epoch: [9][ 0/49]	Time  5.270 ( 5.270)	Loss (Total) 7.2779 (7.2779)
+2026-10-19 23:52:20,240 | Epoch: [9][10/49]	Time  1.215 ( 1.049)	Loss (Total) 9.4884 (10.8473)
+2026-10-19 23:52:30,110 | Epoch: [9][20/49]	Time  0.791 ( 1.019)	Loss (Total) 9.1975 (10.6899)
+2026-10-19 23:52:38,743 | Epoch: [9][30/49]	Time  0.122 ( 0.969)	Loss (Total) 10.4713 (10.3784)
+2026-10-19 23:52:48,152 | Epoch: [9][40/49]	Time  2.692 ( 0.962)	Loss (Total) 9.5267 (10.3820)
+2026-10-19 23:52:53,387 | Updated running statistics with Epoch [8] features!
+2026-10-19 23:52:56,889 | Val Epoch 9: [0/7]	Time  3.500 ( 3.500)	Center_MSE 0.1344 (0.1344)
+2026-10-19 23:53:00,396 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4052)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.13%&	    78.59%&	    80.45%&	    56.67%&
+     Tube_L1&	      0.0655&	    0.0697&	    0.1069&	    0.0581&	    0.0657&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.73%&	    81.00%&	    81.27%&	    85.91%&	    70.00%&
+     Tube_L1&	      0.0592&	    0.0658&	    0.1060&	    0.0591&	    0.0483&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.91%&	    77.45%&	    80.45%&	    56.67%&
+     Tube_L1&	      0.0638&	    0.0636&	    0.1036&	    0.0509&	    0.0593&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.13%&	    78.59%&	    80.45%&	    56.67%&
+     Tube_L1&	      0.0658&	    0.0686&	    0.1053&	    0.0542&	    0.0710&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:53:00,397 | Updated smoothed statistics on Epoch [9]!
+2026-10-19 23:53:04,439 | Epoch: [10][ 0/49]	Time  4.040 ( 4.040)	Loss (Total) 9.9543 (9.9543)
+2026-10-19 23:53:12,780 | Epoch: [10][10/49]	Time  0.491 ( 1.126)	Loss (Total) 9.4257 (10.1460)
+2026-10-19 23:53:20,904 | Epoch: [10][20/49]	Time  0.709 ( 0.976)	Loss (Total) 7.6401 (10.1930)
+2026-10-19 23:53:31,324 | Epoch: [10][30/49]	Time  0.114 ( 0.998)	Loss (Total) 9.5722 (10.0063)
+2026-10-19 23:53:38,402 | Epoch: [10][40/49]	Time  0.120 ( 0.927)	Loss (Total) 10.2411 (10.0082)
+2026-10-19 23:53:46,169 | Updated running statistics with Epoch [9] features!
+2026-10-19 23:53:49,404 | Val Epoch 10: [0/7]	Time  3.234 ( 3.234)	Center_MSE 0.0866 (0.0866)
+2026-10-19 23:53:53,052 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.3962)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.22%&	    81.54%&	    84.36%&	    82.73%&	    76.67%&
+     Tube_L1&	      0.0639&	    0.0638&	    0.1038&	    0.0630&	    0.0337&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      87.24%&	    82.61%&	    84.74%&	    84.55%&	    76.67%&
+     Tube_L1&	      0.0611&	    0.0638&	    0.1045&	    0.0669&	    0.0243&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    79.32%&	    79.52%&	    80.45%&	    76.67%&
+     Tube_L1&	      0.0626&	    0.0572&	    0.1030&	    0.0559&	    0.0233&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    81.46%&	    83.98%&	    82.73%&	    76.67%&
+     Tube_L1&	      0.0643&	    0.0603&	    0.1056&	    0.0581&	    0.0290&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:53:53,053 | Updated smoothed statistics on Epoch [10]!
+2026-10-19 23:53:57,545 | Epoch: [11][ 0/49]	Time  4.493 ( 4.493)	Loss (Total) 9.7516 (9.7516)
+2026-10-19 23:54:04,831 | Epoch: [11][10/49]	Time  0.113 ( 1.071)	Loss (Total) 7.1885 (9.5849)
+2026-10-19 23:54:16,380 | Epoch: [11][20/49]	Time  3.207 ( 1.111)	Loss (Total) 6.9277 (9.4163)
+2026-10-19 23:54:23,861 | Epoch: [11][30/49]	Time  0.114 ( 0.994)	Loss (Total) 8.5195 (9.8984)
+2026-10-19 23:54:32,882 | Epoch: [11][40/49]	Time  2.685 ( 0.971)	Loss (Total) 13.0090 (9.9497)
+2026-10-19 23:54:38,681 | Updated running statistics with Epoch [10] features!
+2026-10-19 23:54:42,040 | Val Epoch 11: [0/7]	Time  3.358 ( 3.358)	Center_MSE 0.1388 (0.1388)
+2026-10-19 23:54:45,672 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4136)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    76.18%&	    85.90%&	    80.00%&	    60.00%&
+     Tube_L1&	      0.0697&	    0.0644&	    0.1061&	    0.0573&	    0.0467&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    79.62%&	    84.36%&	    82.27%&	    70.00%&
+     Tube_L1&	      0.0616&	    0.0589&	    0.1052&	    0.0568&	    0.0263&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    79.49%&	    81.62%&	    80.00%&	    76.67%&
+     Tube_L1&	      0.0663&	    0.0547&	    0.1043&	    0.0506&	    0.0240&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    80.27%&	    85.53%&	    80.00%&	    76.67%&
+     Tube_L1&	      0.0691&	    0.0590&	    0.1073&	    0.0541&	    0.0310&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:54:45,674 | Updated smoothed statistics on Epoch [11]!
+2026-10-19 23:54:50,296 | Epoch: [12][ 0/49]	Time  4.622 ( 4.622)	Loss (Total) 9.4663 (9.4663)
+2026-10-19 23:54:58,258 | Epoch: [12][10/49]	Time  0.125 ( 1.144)	Loss (Total) 8.9697 (10.5133)
+2026-10-19 23:55:09,870 | Epoch: [12][20/49]	Time  3.593 ( 1.152)	Loss (Total) 8.3108 (9.8273)
+2026-10-19 23:55:17,542 | Epoch: [12][30/49]	Time  0.129 ( 1.028)	Loss (Total) 8.9018 (10.0091)
+2026-10-19 23:55:27,554 | Epoch: [12][40/49]	Time  3.906 ( 1.021)	Loss (Total) 7.4818 (10.0107)
+2026-10-19 23:55:33,187 | Updated running statistics with Epoch [11] features!
+2026-10-19 23:55:36,456 | Val Epoch 12: [0/7]	Time  3.267 ( 3.267)	Center_MSE 0.1309 (0.1309)
+2026-10-19 23:55:40,228 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4320)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    78.16%&	    82.06%&	    80.45%&	    70.00%&
+     Tube_L1&	      0.0759&	    0.0710&	    0.1164&	    0.0629&	    0.0523&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    78.62%&	    84.36%&	    80.45%&	    70.00%&
+     Tube_L1&	      0.0718&	    0.0685&	    0.1142&	    0.0643&	    0.0410&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    75.45%&	    79.76%&	    76.36%&	    70.00%&
+     Tube_L1&	      0.0718&	    0.0619&	    0.1113&	    0.0554&	    0.0367&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.91%&	    82.06%&	    76.36%&	    70.00%&
+     Tube_L1&	      0.0761&	    0.0695&	    0.1141&	    0.0620&	    0.0503&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:55:40,230 | Updated smoothed statistics on Epoch [12]!
+2026-10-19 23:55:43,284 | Epoch: [13][ 0/49]	Time  3.054 ( 3.054)	Loss (Total) 12.1520 (12.1520)
+2026-10-19 23:55:52,813 | Epoch: [13][10/49]	Time  0.126 ( 1.144)	Loss (Total) 14.1509 (10.7923)
+2026-10-19 23:56:00,753 | Epoch: [13][20/49]	Time  0.422 ( 0.977)	Loss (Total) 8.6234 (10.7457)
+2026-10-19 23:56:11,683 | Epoch: [13][30/49]	Time  0.116 ( 1.015)	Loss (Total) 7.1579 (10.3251)
+2026-10-19 23:56:19,458 | Epoch: [13][40/49]	Time  0.118 ( 0.957)	Loss (Total) 8.4284 (9.9428)
+2026-10-19 23:56:26,741 | Updated running statistics with Epoch [12] features!
+2026-10-19 23:56:29,982 | Val Epoch 13: [0/7]	Time  3.241 ( 3.241)	Center_MSE 0.1235 (0.1235)
+2026-10-19 23:56:33,563 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4379)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    68.63%&	    78.16%&	    78.18%&	    40.00%&
+     Tube_L1&	      0.0796&	    0.0778&	    0.1256&	    0.0600&	    0.0787&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    78.03%&	    84.74%&	    82.27%&	    63.33%&
+     Tube_L1&	      0.0721&	    0.0733&	    0.1150&	    0.0641&	    0.0603&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    70.84%&	    75.86%&	    80.00%&	    46.67%&
+     Tube_L1&	      0.0768&	    0.0697&	    0.1170&	    0.0534&	    0.0677&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    68.63%&	    78.16%&	    78.18%&	    40.00%&
+     Tube_L1&	      0.0792&	    0.0749&	    0.1180&	    0.0561&	    0.0817&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:56:33,565 | Updated smoothed statistics on Epoch [13]!
+2026-10-19 23:56:37,374 | Epoch: [14][ 0/49]	Time  3.808 ( 3.808)	Loss (Total) 7.4943 (7.4943)
+2026-10-19 23:56:45,654 | Epoch: [14][10/49]	Time  0.113 ( 1.099)	Loss (Total) 7.0669 (8.7649)
+2026-10-19 23:56:55,582 | Epoch: [14][20/49]	Time  2.255 ( 1.048)	Loss (Total) 9.8104 (9.5718)
+2026-10-19 23:57:04,042 | Epoch: [14][30/49]	Time  0.151 ( 0.983)	Loss (Total) 6.9731 (9.9501)
+2026-10-19 23:57:12,384 | Epoch: [14][40/49]	Time  0.121 ( 0.947)	Loss (Total) 8.3721 (9.8440)
+2026-10-19 23:57:19,427 | Updated running statistics with Epoch [13] features!
+2026-10-19 23:57:22,654 | Val Epoch 14: [0/7]	Time  3.226 ( 3.226)	Center_MSE 0.1304 (0.1304)
+2026-10-19 23:57:26,331 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4291)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    71.46%&	    83.98%&	    78.18%&	    46.67%&
+     Tube_L1&	      0.0737&	    0.0727&	    0.1051&	    0.0571&	    0.0810&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    72.13%&	    83.98%&	    76.36%&	    53.33%&
+     Tube_L1&	      0.0692&	    0.0707&	    0.1032&	    0.0608&	    0.0663&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    69.42%&	    78.77%&	    76.36%&	    46.67%&
+     Tube_L1&	      0.0718&	    0.0665&	    0.1043&	    0.0535&	    0.0650&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    70.62%&	    79.76%&	    78.18%&	    46.67%&
+     Tube_L1&	      0.0743&	    0.0720&	    0.1052&	    0.0576&	    0.0770&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:57:26,334 | Updated smoothed statistics on Epoch [14]!
+2026-10-19 23:57:31,141 | Epoch: [15][ 0/49]	Time  4.807 ( 4.807)	Loss (Total) 6.7328 (6.7328)
+2026-10-19 23:57:39,198 | Epoch: [15][10/49]	Time  0.119 ( 1.169)	Loss (Total) 7.9072 (8.2315)
+2026-10-19 23:57:49,207 | Epoch: [15][20/49]	Time  3.460 ( 1.089)	Loss (Total) 8.2704 (8.9007)
+2026-10-19 23:57:57,275 | Epoch: [15][30/49]	Time  0.120 ( 0.998)	Loss (Total) 9.2514 (8.9572)
+2026-10-19 23:58:07,364 | Epoch: [15][40/49]	Time  2.242 ( 1.001)	Loss (Total) 8.9631 (9.1704)
+2026-10-19 23:58:13,867 | Updated running statistics with Epoch [14] features!
+2026-10-19 23:58:17,038 | Val Epoch 15: [0/7]	Time  3.170 ( 3.170)	Center_MSE 0.1146 (0.1146)
+2026-10-19 23:58:20,582 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4293)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    67.88%&	    79.38%&	    76.36%&	    40.00%&
+     Tube_L1&	      0.0763&	    0.0799&	    0.1052&	    0.0623&	    0.0987&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    73.61%&	    80.13%&	    80.45%&	    53.33%&
+     Tube_L1&	      0.0699&	    0.0733&	    0.1032&	    0.0643&	    0.0690&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      77.55%&	    66.29%&	    76.47%&	    74.55%&	    40.00%&
+     Tube_L1&	      0.0749&	    0.0740&	    0.1043&	    0.0585&	    0.0840&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      77.55%&	    66.29%&	    76.47%&	    74.55%&	    40.00%&
+     Tube_L1&	      0.0769&	    0.0788&	    0.1051&	    0.0618&	    0.0950&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:58:20,584 | Updated smoothed statistics on Epoch [15]!
+2026-10-19 23:58:24,506 | Epoch: [16][ 0/49]	Time  3.921 ( 3.921)	Loss (Total) 7.2158 (7.2158)
+2026-10-19 23:58:32,164 | Epoch: [16][10/49]	Time  0.119 ( 1.053)	Loss (Total) 10.8736 (9.0986)
+2026-10-19 23:58:41,456 | Epoch: [16][20/49]	Time  0.118 ( 0.994)	Loss (Total) 7.1330 (9.3041)
+2026-10-19 23:58:50,588 | Epoch: [16][30/49]	Time  0.118 ( 0.968)	Loss (Total) 9.4679 (9.1213)
+2026-10-19 23:58:59,155 | Epoch: [16][40/49]	Time  0.119 ( 0.941)	Loss (Total) 8.2893 (9.3868)
+2026-10-19 23:59:05,822 | Updated running statistics with Epoch [15] features!
+2026-10-19 23:59:09,098 | Val Epoch 16: [0/7]	Time  3.275 ( 3.275)	Center_MSE 0.1107 (0.1107)
+2026-10-19 23:59:12,737 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4098)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    72.37%&	    82.29%&	    80.45%&	    46.67%&
+     Tube_L1&	      0.0684&	    0.0711&	    0.0981&	    0.0584&	    0.0777&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    75.50%&	    84.59%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0657&	    0.0724&	    0.0942&	    0.0613&	    0.0793&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.53%&	    78.06%&	    80.45%&	    46.67%&
+     Tube_L1&	      0.0646&	    0.0632&	    0.0953&	    0.0495&	    0.0673&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    73.62%&	    82.29%&	    82.73%&	    46.67%&
+     Tube_L1&	      0.0679&	    0.0682&	    0.0984&	    0.0538&	    0.0757&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-19 23:59:12,740 | Updated smoothed statistics on Epoch [16]!
+2026-10-19 23:59:16,740 | Epoch: [17][ 0/49]	Time  4.000 ( 4.000)	Loss (Total) 10.6196 (10.6196)
+2026-10-19 23:59:25,154 | Epoch: [17][10/49]	Time  0.120 ( 1.129)	Loss (Total) 7.8004 (9.2019)
+2026-10-19 23:59:38,007 | Epoch: [17][20/49]	Time  4.565 ( 1.203)	Loss (Total) 9.0828 (9.1619)
+2026-10-19 23:59:44,500 | Epoch: [17][30/49]	Time  0.116 ( 1.025)	Loss (Total) 7.9069 (9.1246)
+2026-10-19 23:59:53,289 | Epoch: [17][40/49]	Time  3.693 ( 0.989)	Loss (Total) 6.4729 (9.1958)
+2026-10-19 23:59:58,926 | Updated running statistics with Epoch [16] features!
+2026-10-20 00:00:02,352 | Val Epoch 17: [0/7]	Time  3.425 ( 3.425)	Center_MSE 0.1027 (0.1027)
+2026-10-20 00:00:05,667 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4030)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.78%&	    79.76%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0645&	    0.0669&	    0.1002&	    0.0485&	    0.0807&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    75.32%&	    82.44%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0586&	    0.0641&	    0.0971&	    0.0545&	    0.0590&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    75.71%&	    79.38%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0639&	    0.0614&	    0.1020&	    0.0427&	    0.0700&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    75.71%&	    79.38%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0661&	    0.0645&	    0.1047&	    0.0448&	    0.0757&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:00:05,668 | Updated smoothed statistics on Epoch [17]!
+2026-10-20 00:00:09,366 | Epoch: [18][ 0/49]	Time  3.697 ( 3.697)	Loss (Total) 13.3693 (13.3693)
+2026-10-20 00:00:16,622 | Epoch: [18][10/49]	Time  0.813 ( 0.996)	Loss (Total) 8.9800 (9.3472)
+2026-10-20 00:00:26,591 | Epoch: [18][20/49]	Time  1.403 ( 0.996)	Loss (Total) 6.2829 (9.4335)
+2026-10-20 00:00:35,306 | Epoch: [18][30/49]	Time  0.138 ( 0.956)	Loss (Total) 9.1664 (9.0950)
+2026-10-20 00:00:43,208 | Epoch: [18][40/49]	Time  0.113 ( 0.916)	Loss (Total) 9.0476 (9.0572)
+2026-10-20 00:00:49,364 | Updated running statistics with Epoch [17] features!
+2026-10-20 00:00:52,452 | Val Epoch 18: [0/7]	Time  3.087 ( 3.087)	Center_MSE 0.1209 (0.1209)
+2026-10-20 00:00:55,930 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4248)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.53%&	    79.76%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0739&	    0.0783&	    0.1138&	    0.0633&	    0.0830&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    73.38%&	    78.97%&	    80.45%&	    53.33%&
+     Tube_L1&	      0.0687&	    0.0754&	    0.1088&	    0.0652&	    0.0710&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    74.07%&	    77.45%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0702&	    0.0688&	    0.1082&	    0.0543&	    0.0693&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    74.46%&	    79.38%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0727&	    0.0733&	    0.1092&	    0.0594&	    0.0750&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:00:55,932 | Updated smoothed statistics on Epoch [18]!
+2026-10-20 00:01:01,377 | Epoch: [19][ 0/49]	Time  5.445 ( 5.445)	Loss (Total) 7.3506 (7.3506)
+2026-10-20 00:01:08,269 | Epoch: [19][10/49]	Time  0.093 ( 1.122)	Loss (Total) 14.1813 (9.6837)
+2026-10-20 00:01:16,891 | Epoch: [19][20/49]	Time  1.894 ( 0.998)	Loss (Total) 8.1532 (9.3453)
+2026-10-20 00:01:26,408 | Epoch: [19][30/49]	Time  0.095 ( 0.983)	Loss (Total) 9.8487 (8.9587)
+2026-10-20 00:01:37,422 | Epoch: [19][40/49]	Time  2.858 ( 1.012)	Loss (Total) 9.3203 (9.0587)
+2026-10-20 00:01:42,365 | Updated running statistics with Epoch [18] features!
+2026-10-20 00:01:45,722 | Val Epoch 19: [0/7]	Time  3.355 ( 3.355)	Center_MSE 0.1250 (0.1250)
+2026-10-20 00:01:49,044 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4324)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.23%&	    78.21%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0773&	    0.0763&	    0.1169&	    0.0563&	    0.0880&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    74.61%&	    80.13%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0716&	    0.0723&	    0.1130&	    0.0562&	    0.0750&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    72.82%&	    77.45%&	    80.00%&	    53.33%&
+     Tube_L1&	      0.0727&	    0.0678&	    0.1100&	    0.0486&	    0.0763&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    74.61%&	    80.13%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0758&	    0.0716&	    0.1124&	    0.0535&	    0.0787&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:01:49,046 | Updated smoothed statistics on Epoch [19]!
+2026-10-20 00:01:52,899 | Epoch: [20][ 0/49]	Time  3.853 ( 3.853)	Loss (Total) 10.5927 (10.5927)
+2026-10-20 00:02:00,480 | Epoch: [20][10/49]	Time  0.093 ( 1.039)	Loss (Total) 10.4028 (8.8976)
+2026-10-20 00:02:12,084 | Epoch: [20][20/49]	Time  3.381 ( 1.097)	Loss (Total) 7.6686 (8.8212)
+2026-10-20 00:02:19,031 | Epoch: [20][30/49]	Time  0.100 ( 0.967)	Loss (Total) 7.5541 (8.5716)
+2026-10-20 00:02:30,368 | Epoch: [20][40/49]	Time  2.604 ( 1.008)	Loss (Total) 8.4771 (8.7666)
+2026-10-20 00:02:34,562 | Updated running statistics with Epoch [19] features!
+2026-10-20 00:02:37,839 | Val Epoch 20: [0/7]	Time  3.276 ( 3.276)	Center_MSE 0.1129 (0.1129)
+2026-10-20 00:02:41,481 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4239)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    73.74%&	    82.06%&	    80.00%&	    53.33%&
+     Tube_L1&	      0.0731&	    0.0710&	    0.1099&	    0.0603&	    0.0637&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.19%&	    80.51%&	    82.27%&	    63.33%&
+     Tube_L1&	      0.0681&	    0.0657&	    0.1105&	    0.0592&	    0.0443&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    72.82%&	    77.45%&	    80.00%&	    53.33%&
+     Tube_L1&	      0.0695&	    0.0617&	    0.1087&	    0.0524&	    0.0447&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.28%&	    79.76%&	    76.36%&	    53.33%&
+     Tube_L1&	      0.0730&	    0.0673&	    0.1107&	    0.0576&	    0.0537&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:02:41,482 | Updated smoothed statistics on Epoch [20]!
+2026-10-20 00:02:45,682 | Epoch: [21][ 0/49]	Time  4.199 ( 4.199)	Loss (Total) 7.8728 (7.8728)
+2026-10-20 00:02:53,613 | Epoch: [21][10/49]	Time  0.099 ( 1.103)	Loss (Total) 9.1438 (8.8231)
+2026-10-20 00:03:03,500 | Epoch: [21][20/49]	Time  2.149 ( 1.048)	Loss (Total) 13.3457 (9.3113)
+2026-10-20 00:03:12,235 | Epoch: [21][30/49]	Time  0.093 ( 0.992)	Loss (Total) 6.1408 (9.0690)
+2026-10-20 00:03:22,258 | Epoch: [21][40/49]	Time  2.918 ( 0.995)	Loss (Total) 13.9479 (9.0014)
+2026-10-20 00:03:26,909 | Updated running statistics with Epoch [20] features!
+2026-10-20 00:03:30,388 | Val Epoch 21: [0/7]	Time  3.477 ( 3.477)	Center_MSE 0.1427 (0.1427)
+2026-10-20 00:03:33,654 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4364)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    68.48%&	    75.30%&	    80.45%&	    36.67%&
+     Tube_L1&	      0.0777&	    0.0774&	    0.1139&	    0.0583&	    0.0903&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    70.11%&	    80.13%&	    78.64%&	    43.33%&
+     Tube_L1&	      0.0732&	    0.0752&	    0.1100&	    0.0615&	    0.0777&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      77.55%&	    66.95%&	    73.93%&	    78.18%&	    36.67%&
+     Tube_L1&	      0.0748&	    0.0701&	    0.1129&	    0.0509&	    0.0780&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    69.91%&	    76.23%&	    78.18%&	    46.67%&
+     Tube_L1&	      0.0787&	    0.0752&	    0.1155&	    0.0553&	    0.0867&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:03:33,656 | Updated smoothed statistics on Epoch [21]!
+2026-10-20 00:03:36,253 | Epoch: [22][ 0/49]	Time  2.596 ( 2.596)	Loss (Total) 10.0345 (10.0345)
+2026-10-20 00:03:44,367 | Epoch: [22][10/49]	Time  0.137 ( 0.974)	Loss (Total) 12.1501 (8.9644)
+2026-10-20 00:03:54,233 | Epoch: [22][20/49]	Time  2.745 ( 0.980)	Loss (Total) 11.1734 (9.0373)
+2026-10-20 00:04:03,556 | Epoch: [22][30/49]	Time  2.340 ( 0.965)	Loss (Total) 7.7574 (8.8986)
+2026-10-20 00:04:12,212 | Epoch: [22][40/49]	Time  2.734 ( 0.940)	Loss (Total) 7.3895 (8.9086)
+2026-10-20 00:04:18,760 | Updated running statistics with Epoch [21] features!
+2026-10-20 00:04:22,060 | Val Epoch 22: [0/7]	Time  3.298 ( 3.298)	Center_MSE 0.1274 (0.1274)
+2026-10-20 00:04:25,662 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4221)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    74.61%&	    80.13%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0707&	    0.0726&	    0.1080&	    0.0553&	    0.0823&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    73.69%&	    80.51%&	    80.45%&	    53.33%&
+     Tube_L1&	      0.0672&	    0.0694&	    0.1078&	    0.0580&	    0.0640&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    73.57%&	    74.92%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0697&	    0.0674&	    0.1089&	    0.0505&	    0.0713&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.23%&	    78.21%&	    82.27%&	    53.33%&
+     Tube_L1&	      0.0716&	    0.0697&	    0.1107&	    0.0520&	    0.0760&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:04:25,663 | Updated smoothed statistics on Epoch [22]!
+2026-10-20 00:04:30,288 | Epoch: [23][ 0/49]	Time  4.624 ( 4.624)	Loss (Total) 7.4543 (7.4543)
+2026-10-20 00:04:37,197 | Epoch: [23][10/49]	Time  0.103 ( 1.048)	Loss (Total) 6.4453 (8.4512)
+2026-10-20 00:04:47,224 | Epoch: [23][20/49]	Time  3.320 ( 1.027)	Loss (Total) 6.6954 (9.0570)
+2026-10-20 00:04:55,435 | Epoch: [23][30/49]	Time  0.113 ( 0.960)	Loss (Total) 13.4093 (9.0754)
+2026-10-20 00:05:05,603 | Epoch: [23][40/49]	Time  2.779 ( 0.974)	Loss (Total) 6.8115 (8.8634)
+2026-10-20 00:05:12,050 | Updated running statistics with Epoch [22] features!
+2026-10-20 00:05:15,467 | Val Epoch 23: [0/7]	Time  3.416 ( 3.416)	Center_MSE 0.1531 (0.1531)
+2026-10-20 00:05:18,760 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4376)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    69.49%&	    79.52%&	    82.27%&	    33.33%&
+     Tube_L1&	      0.0763&	    0.0796&	    0.1082&	    0.0580&	    0.1043&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    72.88%&	    83.98%&	    82.27%&	    43.33%&
+     Tube_L1&	      0.0734&	    0.0793&	    0.1068&	    0.0616&	    0.0963&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      78.57%&	    68.28%&	    73.47%&	    82.27%&	    33.33%&
+     Tube_L1&	      0.0747&	    0.0747&	    0.1093&	    0.0534&	    0.0940&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    66.50%&	    79.15%&	    80.00%&	    26.67%&
+     Tube_L1&	      0.0765&	    0.0761&	    0.1109&	    0.0546&	    0.0957&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:05:18,762 | Updated smoothed statistics on Epoch [23]!
+2026-10-20 00:05:22,628 | Epoch: [24][ 0/49]	Time  3.866 ( 3.866)	Loss (Total) 9.8777 (9.8777)
+2026-10-20 00:05:29,452 | Epoch: [24][10/49]	Time  0.129 ( 0.972)	Loss (Total) 10.8727 (9.5520)
+2026-10-20 00:05:42,001 | Epoch: [24][20/49]	Time  3.966 ( 1.107)	Loss (Total) 9.2482 (9.0174)
+2026-10-20 00:05:48,215 | Epoch: [24][30/49]	Time  0.102 ( 0.950)	Loss (Total) 7.4214 (8.8580)
+2026-10-20 00:05:59,416 | Epoch: [24][40/49]	Time  3.524 ( 0.992)	Loss (Total) 8.1250 (8.6983)
+2026-10-20 00:06:05,097 | Updated running statistics with Epoch [23] features!
+2026-10-20 00:06:08,493 | Val Epoch 24: [0/7]	Time  3.395 ( 3.395)	Center_MSE 0.1182 (0.1182)
+2026-10-20 00:06:11,977 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4073)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    75.32%&	    82.44%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0654&	    0.0648&	    0.1067&	    0.0560&	    0.0507&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    79.79%&	    78.97%&	    84.55%&	    70.00%&
+     Tube_L1&	      0.0634&	    0.0651&	    0.1072&	    0.0616&	    0.0390&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.22%&	    78.59%&	    82.73%&	    60.00%&
+     Tube_L1&	      0.0629&	    0.0571&	    0.1080&	    0.0486&	    0.0350&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.44%&	    80.51%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0654&	    0.0607&	    0.1087&	    0.0523&	    0.0410&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:06:11,978 | Updated smoothed statistics on Epoch [24]!
+2026-10-20 00:06:15,810 | Epoch: [25][ 0/49]	Time  3.831 ( 3.831)	Loss (Total) 6.3582 (6.3582)
+2026-10-20 00:06:23,849 | Epoch: [25][10/49]	Time  0.113 ( 1.079)	Loss (Total) 8.0263 (8.5703)
+2026-10-20 00:06:34,184 | Epoch: [25][20/49]	Time  3.523 ( 1.057)	Loss (Total) 8.5938 (8.2433)
+2026-10-20 00:06:41,793 | Epoch: [25][30/49]	Time  0.100 ( 0.962)	Loss (Total) 5.7664 (8.3024)
+2026-10-20 00:06:51,976 | Epoch: [25][40/49]	Time  3.485 ( 0.976)	Loss (Total) 7.8723 (8.5470)
+2026-10-20 00:06:56,328 | Updated running statistics with Epoch [24] features!
+2026-10-20 00:06:59,553 | Val Epoch 25: [0/7]	Time  3.224 ( 3.224)	Center_MSE 0.1218 (0.1218)
+2026-10-20 00:07:03,206 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4160)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.48%&	    78.21%&	    86.36%&	    53.33%&
+     Tube_L1&	      0.0687&	    0.0680&	    0.1119&	    0.0494&	    0.0737&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    75.86%&	    80.13%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0676&	    0.0688&	    0.1102&	    0.0522&	    0.0723&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    75.74%&	    74.54%&	    86.36%&	    53.33%&
+     Tube_L1&	      0.0668&	    0.0613&	    0.1122&	    0.0442&	    0.0583&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    76.35%&	    77.60%&	    86.36%&	    53.33%&
+     Tube_L1&	      0.0694&	    0.0647&	    0.1146&	    0.0476&	    0.0623&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:07:03,207 | Updated smoothed statistics on Epoch [25]!
+2026-10-20 00:07:06,789 | Epoch: [26][ 0/49]	Time  3.582 ( 3.582)	Loss (Total) 7.8241 (7.8241)
+2026-10-20 00:07:15,009 | Epoch: [26][10/49]	Time  0.235 ( 1.073)	Loss (Total) 8.1145 (8.5150)
+2026-10-20 00:07:23,579 | Epoch: [26][20/49]	Time  1.894 ( 0.970)	Loss (Total) 10.2322 (8.5303)
+2026-10-20 00:07:32,946 | Epoch: [26][30/49]	Time  1.129 ( 0.959)	Loss (Total) 7.6037 (8.4370)
+2026-10-20 00:07:42,381 | Epoch: [26][40/49]	Time  1.721 ( 0.955)	Loss (Total) 8.5221 (8.4070)
+2026-10-20 00:07:48,142 | Updated running statistics with Epoch [25] features!
+2026-10-20 00:07:51,405 | Val Epoch 26: [0/7]	Time  3.261 ( 3.261)	Center_MSE 0.1224 (0.1224)
+2026-10-20 00:07:55,074 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4168)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.21%&	    76.90%&	    86.36%&	    53.33%&
+     Tube_L1&	      0.0691&	    0.0706&	    0.1134&	    0.0489&	    0.0840&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    74.94%&	    80.51%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0666&	    0.0716&	    0.1109&	    0.0540&	    0.0787&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    75.82%&	    74.92%&	    86.36%&	    53.33%&
+     Tube_L1&	      0.0665&	    0.0632&	    0.1123&	    0.0433&	    0.0677&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    76.40%&	    77.83%&	    86.36%&	    53.33%&
+     Tube_L1&	      0.0693&	    0.0667&	    0.1154&	    0.0471&	    0.0707&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:07:55,076 | Updated smoothed statistics on Epoch [26]!
+2026-10-20 00:07:59,390 | Epoch: [27][ 0/49]	Time  4.314 ( 4.314)	Loss (Total) 6.5309 (6.5309)
+2026-10-20 00:08:06,952 | Epoch: [27][10/49]	Time  0.584 ( 1.080)	Loss (Total) 6.1476 (7.6349)
+2026-10-20 00:08:14,776 | Epoch: [27][20/49]	Time  0.819 ( 0.938)	Loss (Total) 8.2815 (8.2030)
+2026-10-20 00:08:24,761 | Epoch: [27][30/49]	Time  2.902 ( 0.958)	Loss (Total) 11.9255 (8.2595)
+2026-10-20 00:08:34,109 | Epoch: [27][40/49]	Time  0.092 ( 0.952)	Loss (Total) 5.8060 (8.2033)
+2026-10-20 00:08:41,480 | Updated running statistics with Epoch [26] features!
+2026-10-20 00:08:44,877 | Val Epoch 27: [0/7]	Time  3.395 ( 3.395)	Center_MSE 0.1089 (0.1089)
+2026-10-20 00:08:48,331 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4167)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    72.30%&	    75.68%&	    82.73%&	    46.67%&
+     Tube_L1&	      0.0745&	    0.0752&	    0.1183&	    0.0588&	    0.0767&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.05%&	    78.59%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0703&	    0.0721&	    0.1164&	    0.0638&	    0.0550&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    73.62%&	    73.93%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0710&	    0.0663&	    0.1159&	    0.0525&	    0.0570&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    72.30%&	    75.68%&	    82.73%&	    46.67%&
+     Tube_L1&	      0.0738&	    0.0704&	    0.1182&	    0.0548&	    0.0663&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:08:48,332 | Updated smoothed statistics on Epoch [27]!
+2026-10-20 00:08:51,402 | Epoch: [28][ 0/49]	Time  3.070 ( 3.070)	Loss (Total) 6.9053 (6.9053)
+2026-10-20 00:09:00,123 | Epoch: [28][10/49]	Time  0.104 ( 1.072)	Loss (Total) 6.2722 (8.2149)
+2026-10-20 00:09:09,800 | Epoch: [28][20/49]	Time  0.092 ( 1.022)	Loss (Total) 5.6817 (8.1737)
+2026-10-20 00:09:21,832 | Epoch: [28][30/49]	Time  0.095 ( 1.081)	Loss (Total) 8.8642 (8.0629)
+2026-10-20 00:09:28,608 | Epoch: [28][40/49]	Time  0.093 ( 0.982)	Loss (Total) 9.1634 (8.5463)
+2026-10-20 00:09:35,237 | Updated running statistics with Epoch [27] features!
+2026-10-20 00:09:38,550 | Val Epoch 28: [0/7]	Time  3.312 ( 3.312)	Center_MSE 0.1200 (0.1200)
+2026-10-20 00:09:41,937 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4244)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.89%&	    75.30%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0748&	    0.0759&	    0.1284&	    0.0543&	    0.0813&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.05%&	    78.59%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0709&	    0.0730&	    0.1269&	    0.0588&	    0.0610&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    73.82%&	    74.92%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0719&	    0.0687&	    0.1239&	    0.0489&	    0.0680&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.89%&	    75.30%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0752&	    0.0721&	    0.1270&	    0.0515&	    0.0733&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:09:41,939 | Updated smoothed statistics on Epoch [28]!
+2026-10-20 00:09:46,362 | Epoch: [29][ 0/49]	Time  4.423 ( 4.423)	Loss (Total) 6.4535 (6.4535)
+2026-10-20 00:09:54,288 | Epoch: [29][10/49]	Time  0.093 ( 1.123)	Loss (Total) 10.4893 (8.6278)
+2026-10-20 00:10:03,955 | Epoch: [29][20/49]	Time  2.460 ( 1.048)	Loss (Total) 9.5117 (8.5653)
+2026-10-20 00:10:10,373 | Epoch: [29][30/49]	Time  0.118 ( 0.917)	Loss (Total) 6.8939 (8.3530)
+2026-10-20 00:10:21,246 | Epoch: [29][40/49]	Time  2.315 ( 0.959)	Loss (Total) 7.6020 (8.3069)
+2026-10-20 00:10:27,237 | Updated running statistics with Epoch [28] features!
+2026-10-20 00:10:30,511 | Val Epoch 29: [0/7]	Time  3.272 ( 3.272)	Center_MSE 0.1282 (0.1282)
+2026-10-20 00:10:33,863 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4153)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    73.97%&	    75.68%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0714&	    0.0695&	    0.1229&	    0.0530&	    0.0630&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    78.64%&	    78.21%&	    82.73%&	    70.00%&
+     Tube_L1&	      0.0688&	    0.0684&	    0.1203&	    0.0578&	    0.0503&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    74.20%&	    76.84%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0687&	    0.0621&	    0.1199&	    0.0474&	    0.0480&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.89%&	    75.30%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0721&	    0.0661&	    0.1231&	    0.0505&	    0.0550&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:10:33,864 | Updated smoothed statistics on Epoch [29]!
+2026-10-20 00:10:38,385 | Epoch: [30][ 0/49]	Time  4.521 ( 4.521)	Loss (Total) 13.1608 (13.1608)
+2026-10-20 00:10:44,985 | Epoch: [30][10/49]	Time  0.107 ( 1.011)	Loss (Total) 10.6648 (8.8917)
+2026-10-20 00:10:54,601 | Epoch: [30][20/49]	Time  1.808 ( 0.987)	Loss (Total) 10.6950 (8.6008)
+2026-10-20 00:11:00,617 | Epoch: [30][30/49]	Time  0.102 ( 0.863)	Loss (Total) 8.2031 (8.5822)
+2026-10-20 00:11:13,626 | Epoch: [30][40/49]	Time  3.881 ( 0.970)	Loss (Total) 8.4390 (8.4698)
+2026-10-20 00:11:19,769 | Updated running statistics with Epoch [29] features!
+2026-10-20 00:11:23,146 | Val Epoch 30: [0/7]	Time  3.376 ( 3.376)	Center_MSE 0.1565 (0.1565)
+2026-10-20 00:11:26,426 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4300)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    74.57%&	    73.70%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0739&	    0.0742&	    0.1168&	    0.0515&	    0.0900&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    73.97%&	    75.68%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0703&	    0.0749&	    0.1122&	    0.0570&	    0.0843&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    74.57%&	    73.70%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0736&	    0.0688&	    0.1184&	    0.0464&	    0.0783&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    74.57%&	    73.70%&	    84.55%&	    53.33%&
+     Tube_L1&	      0.0762&	    0.0716&	    0.1196&	    0.0487&	    0.0837&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:11:26,428 | Updated smoothed statistics on Epoch [30]!
+2026-10-20 00:11:31,602 | Epoch: [31][ 0/49]	Time  5.174 ( 5.174)	Loss (Total) 8.3740 (8.3740)
+2026-10-20 00:11:38,811 | Epoch: [31][10/49]	Time  0.103 ( 1.126)	Loss (Total) 7.9465 (7.4046)
+2026-10-20 00:11:46,398 | Epoch: [31][20/49]	Time  0.127 ( 0.951)	Loss (Total) 8.5802 (7.9749)
+2026-10-20 00:11:55,098 | Epoch: [31][30/49]	Time  0.103 ( 0.925)	Loss (Total) 8.3244 (7.9487)
+2026-10-20 00:12:06,342 | Epoch: [31][40/49]	Time  0.137 ( 0.974)	Loss (Total) 6.1743 (7.9491)
+2026-10-20 00:12:12,086 | Updated running statistics with Epoch [30] features!
+2026-10-20 00:12:15,353 | Val Epoch 31: [0/7]	Time  3.266 ( 3.266)	Center_MSE 0.1329 (0.1329)
+2026-10-20 00:12:18,818 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4155)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    76.47%&	    75.68%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0683&	    0.0675&	    0.1134&	    0.0529&	    0.0630&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.05%&	    78.59%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0663&	    0.0680&	    0.1128&	    0.0570&	    0.0563&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    73.96%&	    75.62%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0673&	    0.0611&	    0.1127&	    0.0480&	    0.0487&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    76.27%&	    74.69%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0694&	    0.0643&	    0.1142&	    0.0503&	    0.0550&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:12:18,820 | Updated smoothed statistics on Epoch [31]!
+2026-10-20 00:12:22,701 | Epoch: [32][ 0/49]	Time  3.881 ( 3.881)	Loss (Total) 6.7772 (6.7772)
+2026-10-20 00:12:31,157 | Epoch: [32][10/49]	Time  0.100 ( 1.122)	Loss (Total) 6.6228 (7.7650)
+2026-10-20 00:12:38,799 | Epoch: [32][20/49]	Time  0.306 ( 0.951)	Loss (Total) 8.1540 (7.9932)
+2026-10-20 00:12:49,878 | Epoch: [32][30/49]	Time  0.146 ( 1.002)	Loss (Total) 7.5503 (8.0661)
+2026-10-20 00:13:00,272 | Epoch: [32][40/49]	Time  3.565 ( 1.011)	Loss (Total) 6.0295 (7.9954)
+2026-10-20 00:13:05,440 | Updated running statistics with Epoch [31] features!
+2026-10-20 00:13:08,716 | Val Epoch 32: [0/7]	Time  3.275 ( 3.275)	Center_MSE 0.1476 (0.1476)
+2026-10-20 00:13:12,286 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4280)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.89%&	    75.30%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0741&	    0.0735&	    0.1263&	    0.0535&	    0.0750&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    76.16%&	    74.13%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0722&	    0.0729&	    0.1237&	    0.0565&	    0.0683&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    71.07%&	    73.70%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0729&	    0.0671&	    0.1248&	    0.0472&	    0.0647&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    73.70%&	    74.31%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0752&	    0.0701&	    0.1262&	    0.0504&	    0.0687&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:13:12,287 | Updated smoothed statistics on Epoch [32]!
+2026-10-20 00:13:16,162 | Epoch: [33][ 0/49]	Time  3.875 ( 3.875)	Loss (Total) 7.2236 (7.2236)
+2026-10-20 00:13:23,338 | Epoch: [33][10/49]	Time  0.112 ( 1.005)	Loss (Total) 7.1190 (8.6286)
+2026-10-20 00:13:34,711 | Epoch: [33][20/49]	Time  3.726 ( 1.068)	Loss (Total) 6.9048 (8.4133)
+2026-10-20 00:13:41,434 | Epoch: [33][30/49]	Time  0.098 ( 0.940)	Loss (Total) 7.5528 (8.4714)
+2026-10-20 00:13:53,044 | Epoch: [33][40/49]	Time  2.797 ( 0.994)	Loss (Total) 8.3972 (8.4136)
+2026-10-20 00:13:58,335 | Updated running statistics with Epoch [32] features!
+2026-10-20 00:14:01,615 | Val Epoch 33: [0/7]	Time  3.279 ( 3.279)	Center_MSE 0.1538 (0.1538)
+2026-10-20 00:14:05,055 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4341)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    74.32%&	    74.92%&	    88.18%&	    43.33%&
+     Tube_L1&	      0.0745&	    0.0748&	    0.1165&	    0.0490&	    0.0983&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    72.85%&	    77.60%&	    84.55%&	    43.33%&
+     Tube_L1&	      0.0727&	    0.0760&	    0.1134&	    0.0520&	    0.0987&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    73.61%&	    71.40%&	    88.18%&	    43.33%&
+     Tube_L1&	      0.0745&	    0.0709&	    0.1183&	    0.0443&	    0.0913&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    74.07%&	    73.70%&	    88.18%&	    43.33%&
+     Tube_L1&	      0.0766&	    0.0725&	    0.1194&	    0.0469&	    0.0913&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:14:05,056 | Updated smoothed statistics on Epoch [33]!
+2026-10-20 00:14:08,469 | Epoch: [34][ 0/49]	Time  3.413 ( 3.413)	Loss (Total) 8.6419 (8.6419)
+2026-10-20 00:14:17,152 | Epoch: [34][10/49]	Time  0.098 ( 1.100)	Loss (Total) 6.9583 (8.1228)
+2026-10-20 00:14:27,461 | Epoch: [34][20/49]	Time  1.811 ( 1.067)	Loss (Total) 10.0507 (8.1475)
+2026-10-20 00:14:35,043 | Epoch: [34][30/49]	Time  0.176 ( 0.967)	Loss (Total) 6.5374 (8.1204)
+2026-10-20 00:14:43,135 | Epoch: [34][40/49]	Time  0.102 ( 0.929)	Loss (Total) 9.8102 (8.2195)
+2026-10-20 00:14:49,922 | Updated running statistics with Epoch [33] features!
+2026-10-20 00:14:53,193 | Val Epoch 34: [0/7]	Time  3.270 ( 3.270)	Center_MSE 0.1484 (0.1484)
+2026-10-20 00:14:56,871 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4236)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.47%&	    75.68%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0715&	    0.0709&	    0.1136&	    0.0515&	    0.0793&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.43%&	    77.98%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0693&	    0.0708&	    0.1116&	    0.0565&	    0.0697&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    71.07%&	    73.70%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0710&	    0.0665&	    0.1139&	    0.0470&	    0.0713&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    71.32%&	    74.92%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0725&	    0.0676&	    0.1149&	    0.0490&	    0.0707&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:14:56,873 | Updated smoothed statistics on Epoch [34]!
+2026-10-20 00:15:02,313 | Epoch: [35][ 0/49]	Time  5.440 ( 5.440)	Loss (Total) 6.6364 (6.6364)
+2026-10-20 00:15:10,608 | Epoch: [35][10/49]	Time  0.097 ( 1.249)	Loss (Total) 8.4102 (7.6050)
+2026-10-20 00:15:20,465 | Epoch: [35][20/49]	Time  2.047 ( 1.123)	Loss (Total) 6.7513 (7.5222)
+2026-10-20 00:15:26,981 | Epoch: [35][30/49]	Time  0.123 ( 0.971)	Loss (Total) 15.9863 (7.9501)
+2026-10-20 00:15:35,690 | Epoch: [35][40/49]	Time  0.625 ( 0.947)	Loss (Total) 6.7692 (7.9287)
+2026-10-20 00:15:40,959 | Updated running statistics with Epoch [34] features!
+2026-10-20 00:15:44,236 | Val Epoch 35: [0/7]	Time  3.276 ( 3.276)	Center_MSE 0.1505 (0.1505)
+2026-10-20 00:15:47,669 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4237)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    71.39%&	    75.30%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0712&	    0.0716&	    0.1192&	    0.0511&	    0.0787&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    74.17%&	    76.67%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0689&	    0.0710&	    0.1175&	    0.0558&	    0.0673&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    71.20%&	    74.31%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0704&	    0.0661&	    0.1194&	    0.0465&	    0.0663&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    72.39%&	    75.30%&	    84.55%&	    43.33%&
+     Tube_L1&	      0.0727&	    0.0685&	    0.1216&	    0.0486&	    0.0697&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:15:47,671 | Updated smoothed statistics on Epoch [35]!
+2026-10-20 00:15:52,511 | Epoch: [36][ 0/49]	Time  4.839 ( 4.839)	Loss (Total) 6.8552 (6.8552)
+2026-10-20 00:16:00,965 | Epoch: [36][10/49]	Time  0.094 ( 1.209)	Loss (Total) 5.9157 (7.6837)
+2026-10-20 00:16:08,294 | Epoch: [36][20/49]	Time  1.425 ( 0.982)	Loss (Total) 7.6612 (8.0598)
+2026-10-20 00:16:17,422 | Epoch: [36][30/49]	Time  0.102 ( 0.960)	Loss (Total) 6.2662 (8.0467)
+2026-10-20 00:16:28,931 | Epoch: [36][40/49]	Time  3.283 ( 1.006)	Loss (Total) 9.7569 (8.1008)
+2026-10-20 00:16:35,290 | Updated running statistics with Epoch [35] features!
+2026-10-20 00:16:38,732 | Val Epoch 36: [0/7]	Time  3.441 ( 3.441)	Center_MSE 0.1462 (0.1462)
+2026-10-20 00:16:42,037 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4228)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    70.73%&	    75.30%&	    84.55%&	    36.67%&
+     Tube_L1&	      0.0727&	    0.0762&	    0.1169&	    0.0563&	    0.0877&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    71.08%&	    73.76%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0701&	    0.0747&	    0.1151&	    0.0598&	    0.0753&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    72.07%&	    73.70%&	    84.55%&	    43.33%&
+     Tube_L1&	      0.0716&	    0.0715&	    0.1159&	    0.0518&	    0.0793&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    70.73%&	    75.30%&	    84.55%&	    36.67%&
+     Tube_L1&	      0.0739&	    0.0737&	    0.1173&	    0.0535&	    0.0833&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:16:42,039 | Updated smoothed statistics on Epoch [36]!
+2026-10-20 00:16:46,482 | Epoch: [37][ 0/49]	Time  4.442 ( 4.442)	Loss (Total) 6.6682 (6.6682)
+2026-10-20 00:16:53,789 | Epoch: [37][10/49]	Time  0.095 ( 1.068)	Loss (Total) 8.7205 (8.0486)
+2026-10-20 00:17:02,987 | Epoch: [37][20/49]	Time  0.090 ( 0.998)	Loss (Total) 8.2443 (8.1422)
+2026-10-20 00:17:12,051 | Epoch: [37][30/49]	Time  2.370 ( 0.968)	Loss (Total) 8.0234 (8.2780)
+2026-10-20 00:17:21,387 | Epoch: [37][40/49]	Time  2.639 ( 0.960)	Loss (Total) 7.2063 (8.1108)
+2026-10-20 00:17:27,543 | Updated running statistics with Epoch [36] features!
+2026-10-20 00:17:30,836 | Val Epoch 37: [0/7]	Time  3.291 ( 3.291)	Center_MSE 0.1573 (0.1573)
+2026-10-20 00:17:34,341 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4319)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    71.39%&	    75.30%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0751&	    0.0759&	    0.1177&	    0.0524&	    0.0943&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.47%&	    75.68%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0732&	    0.0753&	    0.1167&	    0.0564&	    0.0840&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    71.07%&	    73.70%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0747&	    0.0713&	    0.1192&	    0.0476&	    0.0850&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.08%&	    71.07%&	    73.70%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0764&	    0.0725&	    0.1203&	    0.0490&	    0.0857&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:17:34,343 | Updated smoothed statistics on Epoch [37]!
+2026-10-20 00:17:37,802 | Epoch: [38][ 0/49]	Time  3.459 ( 3.459)	Loss (Total) 7.1377 (7.1377)
+2026-10-20 00:17:47,822 | Epoch: [38][10/49]	Time  0.132 ( 1.225)	Loss (Total) 6.3726 (8.4136)
+2026-10-20 00:17:56,216 | Epoch: [38][20/49]	Time  0.095 ( 1.042)	Loss (Total) 6.8264 (8.1582)
+2026-10-20 00:18:04,590 | Epoch: [38][30/49]	Time  0.143 ( 0.976)	Loss (Total) 9.2564 (8.0006)
+2026-10-20 00:18:13,758 | Epoch: [38][40/49]	Time  1.815 ( 0.961)	Loss (Total) 6.0909 (7.9959)
+2026-10-20 00:18:21,389 | Updated running statistics with Epoch [37] features!
+2026-10-20 00:18:24,807 | Val Epoch 38: [0/7]	Time  3.417 ( 3.417)	Center_MSE 0.1437 (0.1437)
+2026-10-20 00:18:28,393 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4178)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    71.85%&	    77.60%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0692&	    0.0695&	    0.1130&	    0.0517&	    0.0740&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    76.54%&	    76.06%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0667&	    0.0684&	    0.1122&	    0.0555&	    0.0617&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    71.20%&	    74.31%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0679&	    0.0638&	    0.1124&	    0.0464&	    0.0633&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    71.32%&	    74.92%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0700&	    0.0660&	    0.1140&	    0.0485&	    0.0660&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:18:28,395 | Updated smoothed statistics on Epoch [38]!
+2026-10-20 00:18:31,743 | Epoch: [39][ 0/49]	Time  3.348 ( 3.348)	Loss (Total) 14.1987 (14.1987)
+2026-10-20 00:18:40,803 | Epoch: [39][10/49]	Time  2.410 ( 1.128)	Loss (Total) 8.9085 (8.8692)
+2026-10-20 00:18:49,503 | Epoch: [39][20/49]	Time  0.098 ( 1.005)	Loss (Total) 7.2619 (8.4608)
+2026-10-20 00:18:58,114 | Epoch: [39][30/49]	Time  1.506 ( 0.959)	Loss (Total) 7.2605 (8.2166)
+2026-10-20 00:19:06,099 | Epoch: [39][40/49]	Time  0.345 ( 0.920)	Loss (Total) 8.6980 (8.0950)
+2026-10-20 00:19:12,576 | Updated running statistics with Epoch [38] features!
+2026-10-20 00:19:15,854 | Val Epoch 39: [0/7]	Time  3.276 ( 3.276)	Center_MSE 0.1353 (0.1353)
+2026-10-20 00:19:19,351 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4136)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    71.85%&	    77.60%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0678&	    0.0714&	    0.1128&	    0.0551&	    0.0740&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    74.63%&	    78.97%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0651&	    0.0699&	    0.1115&	    0.0592&	    0.0600&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.78%&	    77.22%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0657&	    0.0646&	    0.1101&	    0.0487&	    0.0633&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.78%&	    77.22%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0685&	    0.0676&	    0.1127&	    0.0518&	    0.0663&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:19:19,353 | Updated smoothed statistics on Epoch [39]!
+2026-10-20 00:19:23,373 | Epoch: [40][ 0/49]	Time  4.020 ( 4.020)	Loss (Total) 10.8497 (10.8497)
+2026-10-20 00:19:30,708 | Epoch: [40][10/49]	Time  0.147 ( 1.032)	Loss (Total) 6.1344 (7.6208)
+2026-10-20 00:19:40,556 | Epoch: [40][20/49]	Time  2.858 ( 1.010)	Loss (Total) 4.9759 (7.8348)
+2026-10-20 00:19:50,804 | Epoch: [40][30/49]	Time  0.109 ( 1.015)	Loss (Total) 5.6902 (7.8303)
+2026-10-20 00:20:00,077 | Epoch: [40][40/49]	Time  0.089 ( 0.993)	Loss (Total) 5.5642 (8.0508)
+2026-10-20 00:20:06,044 | Updated running statistics with Epoch [39] features!
+2026-10-20 00:20:09,353 | Val Epoch 40: [0/7]	Time  3.308 ( 3.308)	Center_MSE 0.1214 (0.1214)
+2026-10-20 00:20:12,888 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4031)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.05%&	    78.59%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0651&	    0.0675&	    0.1126&	    0.0561&	    0.0563&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    78.72%&	    78.59%&	    82.73%&	    70.00%&
+     Tube_L1&	      0.0624&	    0.0668&	    0.1131&	    0.0595&	    0.0457&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    74.66%&	    79.15%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0623&	    0.0598&	    0.1089&	    0.0498&	    0.0427&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    76.85%&	    77.60%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0653&	    0.0638&	    0.1119&	    0.0529&	    0.0493&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:20:12,890 | Updated smoothed statistics on Epoch [40]!
+2026-10-20 00:20:16,592 | Epoch: [41][ 0/49]	Time  3.702 ( 3.702)	Loss (Total) 7.1013 (7.1013)
+2026-10-20 00:20:24,172 | Epoch: [41][10/49]	Time  0.115 ( 1.026)	Loss (Total) 6.5396 (8.1699)
+2026-10-20 00:20:34,514 | Epoch: [41][20/49]	Time  3.140 ( 1.030)	Loss (Total) 8.6923 (7.7354)
+2026-10-20 00:20:42,133 | Epoch: [41][30/49]	Time  0.094 ( 0.943)	Loss (Total) 7.6639 (7.9138)
+2026-10-20 00:20:52,453 | Epoch: [41][40/49]	Time  2.254 ( 0.965)	Loss (Total) 10.1831 (7.9118)
+2026-10-20 00:20:58,013 | Updated running statistics with Epoch [40] features!
+2026-10-20 00:21:01,391 | Val Epoch 41: [0/7]	Time  3.377 ( 3.377)	Center_MSE 0.1273 (0.1273)
+2026-10-20 00:21:04,589 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4057)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    76.54%&	    76.06%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0651&	    0.0664&	    0.1120&	    0.0526&	    0.0603&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.05%&	    78.59%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0629&	    0.0656&	    0.1120&	    0.0560&	    0.0497&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    74.28%&	    77.22%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0632&	    0.0592&	    0.1101&	    0.0465&	    0.0463&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    76.39%&	    75.30%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0659&	    0.0628&	    0.1119&	    0.0496&	    0.0527&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:21:04,591 | Updated smoothed statistics on Epoch [41]!
+2026-10-20 00:21:07,340 | Epoch: [42][ 0/49]	Time  2.749 ( 2.749)	Loss (Total) 8.3707 (8.3707)
+2026-10-20 00:21:15,133 | Epoch: [42][10/49]	Time  0.117 ( 0.958)	Loss (Total) 8.2964 (7.5607)
+2026-10-20 00:21:24,430 | Epoch: [42][20/49]	Time  1.497 ( 0.945)	Loss (Total) 9.1813 (8.3198)
+2026-10-20 00:21:32,651 | Epoch: [42][30/49]	Time  0.530 ( 0.905)	Loss (Total) 6.9964 (8.0075)
+2026-10-20 00:21:44,119 | Epoch: [42][40/49]	Time  3.943 ( 0.964)	Loss (Total) 7.6428 (8.0385)
+2026-10-20 00:21:49,260 | Updated running statistics with Epoch [41] features!
+2026-10-20 00:21:52,675 | Val Epoch 42: [0/7]	Time  3.414 ( 3.414)	Center_MSE 0.1486 (0.1486)
+2026-10-20 00:21:56,163 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4288)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    72.47%&	    75.68%&	    84.55%&	    43.33%&
+     Tube_L1&	      0.0730&	    0.0768&	    0.1161&	    0.0493&	    0.1057&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    70.54%&	    76.06%&	    80.91%&	    43.33%&
+     Tube_L1&	      0.0701&	    0.0750&	    0.1131&	    0.0533&	    0.0923&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      79.59%&	    72.07%&	    73.70%&	    84.55%&	    43.33%&
+     Tube_L1&	      0.0719&	    0.0716&	    0.1160&	    0.0443&	    0.0960&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.32%&	    74.92%&	    86.36%&	    43.33%&
+     Tube_L1&	      0.0745&	    0.0737&	    0.1181&	    0.0467&	    0.0973&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:21:56,165 | Updated smoothed statistics on Epoch [42]!
+2026-10-20 00:22:00,011 | Epoch: [43][ 0/49]	Time  3.846 ( 3.846)	Loss (Total) 11.7191 (11.7191)
+2026-10-20 00:22:08,262 | Epoch: [43][10/49]	Time  0.099 ( 1.100)	Loss (Total) 7.4820 (8.2185)
+2026-10-20 00:22:19,083 | Epoch: [43][20/49]	Time  2.698 ( 1.091)	Loss (Total) 10.7778 (8.1123)
+2026-10-20 00:22:27,500 | Epoch: [43][30/49]	Time  0.102 ( 1.011)	Loss (Total) 6.4250 (8.4508)
+2026-10-20 00:22:37,938 | Epoch: [43][40/49]	Time  2.598 ( 1.019)	Loss (Total) 6.7497 (8.3146)
+2026-10-20 00:22:44,784 | Updated running statistics with Epoch [42] features!
+2026-10-20 00:22:48,213 | Val Epoch 43: [0/7]	Time  3.429 ( 3.429)	Center_MSE 0.1312 (0.1312)
+2026-10-20 00:22:51,569 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4137)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.47%&	    75.68%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0690&	    0.0704&	    0.1134&	    0.0544&	    0.0713&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    76.54%&	    76.06%&	    82.73%&	    63.33%&
+     Tube_L1&	      0.0665&	    0.0693&	    0.1133&	    0.0579&	    0.0590&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    71.32%&	    74.92%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0672&	    0.0643&	    0.1116&	    0.0484&	    0.0613&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    71.39%&	    75.30%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0697&	    0.0665&	    0.1137&	    0.0510&	    0.0627&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:22:51,571 | Updated smoothed statistics on Epoch [43]!
+2026-10-20 00:22:54,944 | Epoch: [44][ 0/49]	Time  3.373 ( 3.373)	Loss (Total) 9.3779 (9.3779)
+2026-10-20 00:23:02,385 | Epoch: [44][10/49]	Time  0.095 ( 0.983)	Loss (Total) 7.2158 (8.0271)
+2026-10-20 00:23:12,083 | Epoch: [44][20/49]	Time  1.692 ( 0.977)	Loss (Total) 7.7095 (7.8292)
+2026-10-20 00:23:19,467 | Epoch: [44][30/49]	Time  0.137 ( 0.900)	Loss (Total) 7.2723 (7.9740)
+2026-10-20 00:23:28,671 | Epoch: [44][40/49]	Time  0.492 ( 0.905)	Loss (Total) 6.3048 (8.1818)
+2026-10-20 00:23:36,735 | Updated running statistics with Epoch [43] features!
+2026-10-20 00:23:40,061 | Val Epoch 44: [0/7]	Time  3.324 ( 3.324)	Center_MSE 0.1419 (0.1419)
+2026-10-20 00:23:43,698 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4226)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.61%&	    71.65%&	    74.92%&	    86.36%&	    36.67%&
+     Tube_L1&	      0.0720&	    0.0724&	    0.1158&	    0.0485&	    0.0900&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.78%&	    77.22%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0679&	    0.0686&	    0.1138&	    0.0513&	    0.0703&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    73.07%&	    73.70%&	    86.36%&	    43.33%&
+     Tube_L1&	      0.0704&	    0.0669&	    0.1145&	    0.0437&	    0.0800&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    72.65%&	    74.92%&	    88.18%&	    36.67%&
+     Tube_L1&	      0.0733&	    0.0696&	    0.1164&	    0.0463&	    0.0837&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:23:43,699 | Updated smoothed statistics on Epoch [44]!
+2026-10-20 00:23:48,722 | Epoch: [45][ 0/49]	Time  5.023 ( 5.023)	Loss (Total) 10.9043 (10.9043)
+2026-10-20 00:23:56,660 | Epoch: [45][10/49]	Time  0.102 ( 1.178)	Loss (Total) 11.2619 (7.7351)
+2026-10-20 00:24:06,578 | Epoch: [45][20/49]	Time  3.730 ( 1.089)	Loss (Total) 7.1105 (7.7543)
+2026-10-20 00:24:14,052 | Epoch: [45][30/49]	Time  0.108 ( 0.979)	Loss (Total) 5.8769 (8.1446)
+2026-10-20 00:24:24,651 | Epoch: [45][40/49]	Time  4.559 ( 0.999)	Loss (Total) 6.7347 (8.1168)
+2026-10-20 00:24:29,138 | Updated running statistics with Epoch [44] features!
+2026-10-20 00:24:32,378 | Val Epoch 45: [0/7]	Time  3.239 ( 3.239)	Center_MSE 0.1388 (0.1388)
+2026-10-20 00:24:36,067 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4159)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    71.47%&	    75.68%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0691&	    0.0706&	    0.1162&	    0.0518&	    0.0753&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    74.04%&	    76.06%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0659&	    0.0688&	    0.1141&	    0.0547&	    0.0633&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      80.10%&	    71.32%&	    74.92%&	    82.73%&	    43.33%&
+     Tube_L1&	      0.0668&	    0.0636&	    0.1139&	    0.0460&	    0.0623&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.12%&	    73.89%&	    75.30%&	    82.73%&	    53.33%&
+     Tube_L1&	      0.0693&	    0.0660&	    0.1154&	    0.0484&	    0.0653&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:24:36,145 | Now testing on the test set
+2026-10-20 00:25:15,656 | Test: [0/7]	Time 39.511 (39.511)	Center_MSE 0.1119 (0.1119)
+2026-10-20 00:25:18,342 | Now is Interval Accuracy (+-0.30) & Tube_L1 metrics (Center RMSE: 0.4125)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.36%&	    80.11%&	    75.15%&	    80.00%&
+     Tube_L1&	      0.0726&	    0.1013&	    0.0915&	    0.1070&	    0.0967&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    76.43%&	    81.71%&	    72.88%&	    80.00%&
+     Tube_L1&	      0.0740&	    0.1104&	    0.0888&	    0.1227&	    0.1007&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.70%&	    79.73%&	    75.91%&	    80.00%&
+     Tube_L1&	      0.0691&	    0.0918&	    0.0910&	    0.0935&	    0.0887&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    78.11%&	    79.73%&	    76.67%&	    80.00%&
+     Tube_L1&	      0.0720&	    0.0988&	    0.0914&	    0.1013&	    0.0993&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 00:25:18,342 | 
+📊 正在使用最佳模型 ([LDS_FDS], Epoch 8, Head=combmul) 輸出區間對齊圖與 CSV...
+2026-10-20 00:26:38,389 | 
+==========================================
+2026-10-20 00:26:38,389 |    HCA [LDS_FDS] (combmul) Final Alignment Results (Epoch 8)
+2026-10-20 00:26:38,389 | ==========================================
+2026-10-20 00:26:38,389 | [Training Set]   Interval Acc: 93.61% | Center RMSE: 0.2746
+2026-10-20 00:26:38,389 | [Validation Set] Interval Acc: 84.69% | Center RMSE: 0.3829
+2026-10-20 00:26:38,389 | [Test Set]       Interval Acc: 83.67% | Bal Acc: 78.11% | Center RMSE: 0.4125
+2026-10-20 00:26:38,389 | ==========================================

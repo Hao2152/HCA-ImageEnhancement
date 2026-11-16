@@ -1,0 +1,62 @@
+2026-11-04 13:51:45,956 | =====> 2-Region Dual-Branch HCA Feature Slicing: [LDS_RANKSIM] | Args: Namespace(lds=True, lds_kernel='gaussian', lds_ks=5, lds_sigma=1.0, reweight='none', fds=False, fds_kernel='gaussian', fds_ks=5, fds_sigma=1.0, start_update=0, start_smooth=1, bucket_num=20, bucket_start=0, fds_mmt=0.9, ranksim=True, regularization_weight=1.0, interpolation_lambda=2.0, seed=42, tol=0.3, csv_path='./alpha_data_2region.csv', raw_csv_path='E:/2DS_Result/ALL_Best_Summary_all.csv', batch_size=64, epochs=200, lr=0.002, weight_decay=0.001, feat_dim=256, dropout=0.25, temp=0.35, save_best=True, resume='', evaluate_only=False, plot_head='adjcls', save_dir='./checkpoints_2region', log_dir='analy_log_2region', log_name='2region_hca.log', head_num=4)
+2026-11-04 13:56:48,221 | Now evaluating 2-Region models on test set
+2026-11-04 13:56:48,243 | [Test (Foreground)] Interval Accuracy (+-0.30) (Center RMSE: 0.1793)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.00%&	    88.09%&	    83.31%&	    96.43%&	    83.33%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.50%&	    89.14%&	    85.63%&	    96.43%&	    83.33%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.00%&	    87.42%&	    81.84%&	    96.43%&	    83.33%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.50%&	    87.54%&	    82.11%&	    96.43%&	    83.33%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+2026-11-04 13:56:48,264 | [Test (Background)] Interval Accuracy (+-0.30) (Center RMSE: 0.2797)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      71.50%&	    73.14%&	    62.02%&	    75.00%&	    81.67%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      73.00%&	    76.92%&	    65.22%&	   100.00%&	    81.67%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      71.50%&	    75.41%&	    61.45%&	   100.00%&	    81.67%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      71.50%&	    75.29%&	    61.14%&	   100.00%&	    81.67%&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+2026-11-04 13:56:48,581 | \n==========================================
+2026-11-04 13:56:48,581 |    2-Region HCA [LDS_RANKSIM] (singlecls) Final Alignment Results
+2026-11-04 13:56:48,581 | ==========================================
+2026-11-04 13:56:48,581 | [Test Set - In]  Interval Acc: 83.00%
+2026-11-04 13:56:48,581 | [Test Set - Out] Interval Acc: 71.50%
+2026-11-04 13:56:48,581 | ==========================================
+2026-11-04 13:56:48,880 | \n==========================================
+2026-11-04 13:56:48,880 |    2-Region HCA [LDS_RANKSIM] (adjcls) Final Alignment Results
+2026-11-04 13:56:48,880 | ==========================================
+2026-11-04 13:56:48,880 | [Test Set - In]  Interval Acc: 85.50%
+2026-11-04 13:56:48,880 | [Test Set - Out] Interval Acc: 73.00%
+2026-11-04 13:56:48,880 | ==========================================
+2026-11-04 13:56:54,397 | \n==========================================
+2026-11-04 13:56:54,398 |    2-Region HCA [LDS_RANKSIM] (combadd) Final Alignment Results
+2026-11-04 13:56:54,398 | ==========================================
+2026-11-04 13:56:54,398 | [Test Set - In]  Interval Acc: 83.00%
+2026-11-04 13:56:54,398 | [Test Set - Out] Interval Acc: 71.50%
+2026-11-04 13:56:54,398 | ==========================================
+2026-11-04 13:56:54,751 | \n==========================================
+2026-11-04 13:56:54,751 |    2-Region HCA [LDS_RANKSIM] (combmul) Final Alignment Results
+2026-11-04 13:56:54,751 | ==========================================
+2026-11-04 13:56:54,751 | [Test Set - In]  Interval Acc: 83.50%
+2026-11-04 13:56:54,752 | [Test Set - Out] Interval Acc: 71.50%
+2026-11-04 13:56:54,752 | ==========================================

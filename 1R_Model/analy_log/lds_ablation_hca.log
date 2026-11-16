@@ -1,0 +1,278 @@
+2026-10-20 08:58:19,360 | =====> Pure Tabular HCA Ablation: [LDS] | Args: Namespace(lds=True, lds_kernel='gaussian', lds_ks=5, lds_sigma=1.0, reweight='sqrt_inv', fds=False, fds_kernel='gaussian', fds_ks=5, fds_sigma=1.0, start_update=0, start_smooth=1, bucket_num=20, bucket_start=0, fds_mmt=0.9, ranksim=False, regularization_weight=0.0, interpolation_lambda=2.0, seed=42, tol=0.3, csv_path='./alpha_data.csv', raw_csv_path='./ALL_Best_Summary_ExtendedFeatures_Advanced.csv', batch_size=64, epochs=80, lr=0.002, weight_decay=0.001, feat_dim=256, dropout=0.25, temp=0.35, save_best=False, resume='', evaluate_only=False, plot_head='adjcls', save_dir='./checkpoints_ablation', log_dir='analy_log', log_name='ablation_hca.log', head_num=4)
+2026-10-20 08:58:19,436 | Using re-weighting: [SQRT_INV]
+2026-10-20 08:58:19,436 | Using LDS: [GAUSSIAN] (5/1.0)
+2026-10-20 08:58:28,596 | [Val Epoch 20] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4271)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    75.25%&	    74.98%&	    77.73%&	    70.00%&
+     Tube_L1&	      0.0803&	    0.0759&	    0.1325&	    0.0796&	    0.0223&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    77.26%&	    76.29%&	    80.91%&	    70.00%&
+     Tube_L1&	      0.0814&	    0.0768&	    0.1286&	    0.0802&	    0.0280&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    80.48%&	    77.83%&	    83.18%&	    76.67%&
+     Tube_L1&	      0.0766&	    0.0692&	    0.1177&	    0.0706&	    0.0273&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    79.10%&	    75.91%&	    81.36%&	    76.67%&
+     Tube_L1&	      0.0792&	    0.0728&	    0.1265&	    0.0767&	    0.0213&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 08:58:36,170 | [Val Epoch 40] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4458)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    77.13%&	    86.89%&	    76.82%&	    70.00%&
+     Tube_L1&	      0.0819&	    0.0910&	    0.1070&	    0.1075&	    0.0417&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    79.33%&	    84.59%&	    78.64%&	    76.67%&
+     Tube_L1&	      0.0847&	    0.0884&	    0.1058&	    0.1024&	    0.0437&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.22%&	    80.72%&	    86.51%&	    80.45%&	    76.67%&
+     Tube_L1&	      0.0743&	    0.0826&	    0.0961&	    0.0925&	    0.0500&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    78.13%&	    86.89%&	    78.64%&	    70.00%&
+     Tube_L1&	      0.0785&	    0.0877&	    0.1021&	    0.1016&	    0.0453&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 08:58:43,876 | [Val Epoch 60] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4425)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.62%&	    82.29%&	    77.27%&	    66.67%&
+     Tube_L1&	      0.0830&	    0.0849&	    0.1233&	    0.1010&	    0.0190&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    78.51%&	    84.21%&	    77.27%&	    76.67%&
+     Tube_L1&	      0.0878&	    0.0843&	    0.1241&	    0.0971&	    0.0243&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    77.57%&	    82.84%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0737&	    0.0758&	    0.1098&	    0.0845&	    0.0293&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    78.39%&	    83.60%&	    77.27%&	    76.67%&
+     Tube_L1&	      0.0770&	    0.0792&	    0.1162&	    0.0924&	    0.0207&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 08:58:51,760 | [Val Epoch 80] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4388)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.62%&	    82.29%&	    77.27%&	    66.67%&
+     Tube_L1&	      0.0851&	    0.0864&	    0.1207&	    0.1009&	    0.0270&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.62%&	    82.29%&	    77.27%&	    66.67%&
+     Tube_L1&	      0.0867&	    0.0848&	    0.1218&	    0.0966&	    0.0290&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.72%&	    83.60%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0745&	    0.0752&	    0.1088&	    0.0838&	    0.0293&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    78.39%&	    83.60%&	    77.27%&	    76.67%&
+     Tube_L1&	      0.0784&	    0.0794&	    0.1145&	    0.0927&	    0.0220&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 08:58:51,763 | Now testing on the test set
+2026-10-20 08:58:51,787 | [Test] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4061)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    79.91%&	    83.30%&	    72.58%&	    93.33%&
+     Tube_L1&	      0.0631&	    0.0766&	    0.0887&	    0.0995&	    0.0167&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    79.19%&	    83.86%&	    71.06%&	    93.33%&
+     Tube_L1&	      0.0654&	    0.0803&	    0.0923&	    0.1040&	    0.0187&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    81.07%&	    79.93%&	    75.91%&	    93.33%&
+     Tube_L1&	      0.0596&	    0.0625&	    0.0897&	    0.0789&	    0.0047&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    79.31%&	    80.31%&	    72.58%&	    93.33%&
+     Tube_L1&	      0.0619&	    0.0702&	    0.0903&	    0.0899&	    0.0107&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 08:58:51,936 | 
+==========================================
+2026-10-20 08:58:51,936 |    HCA [LDS] (adjcls) Final Alignment Results (Epoch 80)
+2026-10-20 08:58:51,936 | ==========================================
+2026-10-20 08:58:51,936 | [Training Set]   Interval Acc: 92.46% | Center RMSE: 0.2819
+2026-10-20 08:58:51,936 | [Validation Set] Interval Acc: 83.16% | Center RMSE: 0.4388
+2026-10-20 08:58:51,937 | [Test Set]       Interval Acc: 83.16% | Bal Acc: 79.19% | Center RMSE: 0.4061
+2026-10-20 08:58:51,937 | ==========================================
+2026-10-20 09:40:04,017 | =====> Pure Tabular HCA Ablation: [LDS] | Args: Namespace(lds=True, lds_kernel='gaussian', lds_ks=5, lds_sigma=1.0, reweight='sqrt_inv', fds=False, fds_kernel='gaussian', fds_ks=5, fds_sigma=1.0, start_update=0, start_smooth=1, bucket_num=20, bucket_start=0, fds_mmt=0.9, ranksim=False, regularization_weight=0.0, interpolation_lambda=2.0, seed=42, tol=0.3, csv_path='./alpha_data.csv', raw_csv_path='./ALL_Best_Summary_ExtendedFeatures_Advanced.csv', batch_size=64, epochs=80, lr=0.002, weight_decay=0.001, feat_dim=256, dropout=0.25, temp=0.35, save_best=False, resume='', evaluate_only=False, plot_head='adjcls', save_dir='./checkpoints_ablation', log_dir='analy_log', log_name='ablation_hca.log', head_num=4)
+2026-10-20 09:40:04,044 | Using re-weighting: [SQRT_INV]
+2026-10-20 09:40:04,044 | Using LDS: [GAUSSIAN] (5/1.0)
+2026-10-20 09:40:13,149 | [Val Epoch 20] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4271)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    75.25%&	    74.98%&	    77.73%&	    70.00%&
+     Tube_L1&	      0.0803&	    0.0759&	    0.1325&	    0.0796&	    0.0223&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    77.26%&	    76.29%&	    80.91%&	    70.00%&
+     Tube_L1&	      0.0814&	    0.0768&	    0.1286&	    0.0802&	    0.0280&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    80.48%&	    77.83%&	    83.18%&	    76.67%&
+     Tube_L1&	      0.0766&	    0.0692&	    0.1177&	    0.0706&	    0.0273&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    79.10%&	    75.91%&	    81.36%&	    76.67%&
+     Tube_L1&	      0.0792&	    0.0728&	    0.1265&	    0.0767&	    0.0213&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:40:20,506 | [Val Epoch 40] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4458)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    77.13%&	    86.89%&	    76.82%&	    70.00%&
+     Tube_L1&	      0.0819&	    0.0910&	    0.1070&	    0.1075&	    0.0417&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    79.33%&	    84.59%&	    78.64%&	    76.67%&
+     Tube_L1&	      0.0847&	    0.0884&	    0.1058&	    0.1024&	    0.0437&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      86.22%&	    80.72%&	    86.51%&	    80.45%&	    76.67%&
+     Tube_L1&	      0.0743&	    0.0826&	    0.0961&	    0.0925&	    0.0500&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.71%&	    78.13%&	    86.89%&	    78.64%&	    70.00%&
+     Tube_L1&	      0.0785&	    0.0877&	    0.1021&	    0.1016&	    0.0453&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:40:28,170 | [Val Epoch 60] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4425)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.62%&	    82.29%&	    77.27%&	    66.67%&
+     Tube_L1&	      0.0830&	    0.0849&	    0.1233&	    0.1010&	    0.0190&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    78.51%&	    84.21%&	    77.27%&	    76.67%&
+     Tube_L1&	      0.0878&	    0.0843&	    0.1241&	    0.0971&	    0.0243&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    77.57%&	    82.84%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0737&	    0.0758&	    0.1098&	    0.0845&	    0.0293&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    78.39%&	    83.60%&	    77.27%&	    76.67%&
+     Tube_L1&	      0.0770&	    0.0792&	    0.1162&	    0.0924&	    0.0207&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:40:36,030 | [Val Epoch 80] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4388)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.62%&	    82.29%&	    77.27%&	    66.67%&
+     Tube_L1&	      0.0851&	    0.0864&	    0.1207&	    0.1009&	    0.0270&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.62%&	    82.29%&	    77.27%&	    66.67%&
+     Tube_L1&	      0.0867&	    0.0848&	    0.1218&	    0.0966&	    0.0290&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    77.72%&	    83.60%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0745&	    0.0752&	    0.1088&	    0.0838&	    0.0293&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    78.39%&	    83.60%&	    77.27%&	    76.67%&
+     Tube_L1&	      0.0784&	    0.0794&	    0.1145&	    0.0927&	    0.0220&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:40:36,035 | Now testing on the test set
+2026-10-20 09:40:36,068 | [Test] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4061)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    79.91%&	    83.30%&	    72.58%&	    93.33%&
+     Tube_L1&	      0.0631&	    0.0766&	    0.0887&	    0.0995&	    0.0167&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    79.19%&	    83.86%&	    71.06%&	    93.33%&
+     Tube_L1&	      0.0654&	    0.0803&	    0.0923&	    0.1040&	    0.0187&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.14%&	    81.07%&	    79.93%&	    75.91%&	    93.33%&
+     Tube_L1&	      0.0596&	    0.0625&	    0.0897&	    0.0789&	    0.0047&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      81.63%&	    79.31%&	    80.31%&	    72.58%&	    93.33%&
+     Tube_L1&	      0.0619&	    0.0702&	    0.0903&	    0.0899&	    0.0107&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:40:36,254 | 
+==========================================
+2026-10-20 09:40:36,254 |    HCA [LDS] (singlecls) Final Alignment Results (Epoch 80)
+2026-10-20 09:40:36,254 | ==========================================
+2026-10-20 09:40:36,254 | [Training Set]   Interval Acc: 92.14% | Center RMSE: 0.2810
+2026-10-20 09:40:36,254 | [Validation Set] Interval Acc: 83.16% | Center RMSE: 0.4339
+2026-10-20 09:40:36,255 | [Test Set]       Interval Acc: 83.67% | Bal Acc: 79.91% | Center RMSE: 0.4011
+2026-10-20 09:40:36,255 | ==========================================
+2026-10-20 09:40:36,430 | 
+==========================================
+2026-10-20 09:40:36,431 |    HCA [LDS] (adjcls) Final Alignment Results (Epoch 80)
+2026-10-20 09:40:36,431 | ==========================================
+2026-10-20 09:40:36,431 | [Training Set]   Interval Acc: 92.46% | Center RMSE: 0.2819
+2026-10-20 09:40:36,431 | [Validation Set] Interval Acc: 83.16% | Center RMSE: 0.4388
+2026-10-20 09:40:36,431 | [Test Set]       Interval Acc: 83.16% | Bal Acc: 79.19% | Center RMSE: 0.4061
+2026-10-20 09:40:36,431 | ==========================================
+2026-10-20 09:40:40,138 | 
+==========================================
+2026-10-20 09:40:40,138 |    HCA [LDS] (combadd) Final Alignment Results (Epoch 80)
+2026-10-20 09:40:40,138 | ==========================================
+2026-10-20 09:40:40,139 | [Training Set]   Interval Acc: 90.48% | Center RMSE: 0.2913
+2026-10-20 09:40:40,139 | [Validation Set] Interval Acc: 83.16% | Center RMSE: 0.4085
+2026-10-20 09:40:40,139 | [Test Set]       Interval Acc: 82.14% | Bal Acc: 81.07% | Center RMSE: 0.3886
+2026-10-20 09:40:40,139 | ==========================================
+2026-10-20 09:40:40,364 | 
+==========================================
+2026-10-20 09:40:40,364 |    HCA [LDS] (combmul) Final Alignment Results (Epoch 80)
+2026-10-20 09:40:40,364 | ==========================================
+2026-10-20 09:40:40,365 | [Training Set]   Interval Acc: 91.63% | Center RMSE: 0.2902
+2026-10-20 09:40:40,365 | [Validation Set] Interval Acc: 83.16% | Center RMSE: 0.4188
+2026-10-20 09:40:40,365 | [Test Set]       Interval Acc: 81.63% | Bal Acc: 79.31% | Center RMSE: 0.3976
+2026-10-20 09:40:40,365 | ==========================================

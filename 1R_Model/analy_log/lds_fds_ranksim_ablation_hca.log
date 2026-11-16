@@ -1,0 +1,598 @@
+2026-10-20 09:01:15,689 | =====> Pure Tabular HCA Ablation: [LDS_FDS_RANKSIM] | Args: Namespace(lds=True, lds_kernel='gaussian', lds_ks=5, lds_sigma=1.0, reweight='sqrt_inv', fds=True, fds_kernel='gaussian', fds_ks=5, fds_sigma=1.0, start_update=0, start_smooth=1, bucket_num=20, bucket_start=0, fds_mmt=0.9, ranksim=True, regularization_weight=0.5, interpolation_lambda=2.0, seed=42, tol=0.3, csv_path='./alpha_data.csv', raw_csv_path='./ALL_Best_Summary_ExtendedFeatures_Advanced.csv', batch_size=64, epochs=80, lr=0.002, weight_decay=0.001, feat_dim=256, dropout=0.25, temp=0.35, save_best=False, resume='', evaluate_only=False, plot_head='adjcls', save_dir='./checkpoints_ablation', log_dir='analy_log', log_name='ablation_hca.log', head_num=4)
+2026-10-20 09:01:15,716 | Using re-weighting: [SQRT_INV]
+2026-10-20 09:01:15,716 | Using LDS: [GAUSSIAN] (5/1.0)
+2026-10-20 09:01:15,836 | Using FDS: [GAUSSIAN] (5/1.0)
+2026-10-20 09:01:18,493 | Updated running statistics with Epoch [0] features!
+2026-10-20 09:01:18,550 | Updated smoothed statistics on Epoch [1]!
+2026-10-20 09:01:19,895 | Updated running statistics with Epoch [1] features!
+2026-10-20 09:01:19,896 | Updated smoothed statistics on Epoch [2]!
+2026-10-20 09:01:21,246 | Updated running statistics with Epoch [2] features!
+2026-10-20 09:01:21,247 | Updated smoothed statistics on Epoch [3]!
+2026-10-20 09:01:22,620 | Updated running statistics with Epoch [3] features!
+2026-10-20 09:01:22,621 | Updated smoothed statistics on Epoch [4]!
+2026-10-20 09:01:23,977 | Updated running statistics with Epoch [4] features!
+2026-10-20 09:01:23,978 | Updated smoothed statistics on Epoch [5]!
+2026-10-20 09:01:25,326 | Updated running statistics with Epoch [5] features!
+2026-10-20 09:01:25,328 | Updated smoothed statistics on Epoch [6]!
+2026-10-20 09:01:26,680 | Updated running statistics with Epoch [6] features!
+2026-10-20 09:01:26,681 | Updated smoothed statistics on Epoch [7]!
+2026-10-20 09:01:28,050 | Updated running statistics with Epoch [7] features!
+2026-10-20 09:01:28,051 | Updated smoothed statistics on Epoch [8]!
+2026-10-20 09:01:29,389 | Updated running statistics with Epoch [8] features!
+2026-10-20 09:01:29,390 | Updated smoothed statistics on Epoch [9]!
+2026-10-20 09:01:30,788 | Updated running statistics with Epoch [9] features!
+2026-10-20 09:01:30,790 | Updated smoothed statistics on Epoch [10]!
+2026-10-20 09:01:32,237 | Updated running statistics with Epoch [10] features!
+2026-10-20 09:01:32,239 | Updated smoothed statistics on Epoch [11]!
+2026-10-20 09:01:33,920 | Updated running statistics with Epoch [11] features!
+2026-10-20 09:01:33,922 | Updated smoothed statistics on Epoch [12]!
+2026-10-20 09:01:35,353 | Updated running statistics with Epoch [12] features!
+2026-10-20 09:01:35,354 | Updated smoothed statistics on Epoch [13]!
+2026-10-20 09:01:36,746 | Updated running statistics with Epoch [13] features!
+2026-10-20 09:01:36,747 | Updated smoothed statistics on Epoch [14]!
+2026-10-20 09:01:38,114 | Updated running statistics with Epoch [14] features!
+2026-10-20 09:01:38,115 | Updated smoothed statistics on Epoch [15]!
+2026-10-20 09:01:39,431 | Updated running statistics with Epoch [15] features!
+2026-10-20 09:01:39,432 | Updated smoothed statistics on Epoch [16]!
+2026-10-20 09:01:40,716 | Updated running statistics with Epoch [16] features!
+2026-10-20 09:01:40,717 | Updated smoothed statistics on Epoch [17]!
+2026-10-20 09:01:42,157 | Updated running statistics with Epoch [17] features!
+2026-10-20 09:01:42,159 | Updated smoothed statistics on Epoch [18]!
+2026-10-20 09:01:43,453 | Updated running statistics with Epoch [18] features!
+2026-10-20 09:01:43,454 | Updated smoothed statistics on Epoch [19]!
+2026-10-20 09:01:44,769 | Updated running statistics with Epoch [19] features!
+2026-10-20 09:01:44,796 | [Val Epoch 20] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4025)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.07%&	    80.74%&	    80.45%&	    66.67%&
+     Tube_L1&	      0.0702&	    0.0703&	    0.1026&	    0.0756&	    0.0327&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.94%&	    80.13%&	    78.64%&	    66.67%&
+     Tube_L1&	      0.0690&	    0.0680&	    0.0958&	    0.0775&	    0.0250&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.37%&	    82.29%&	    80.45%&	    66.67%&
+     Tube_L1&	      0.0699&	    0.0686&	    0.0943&	    0.0720&	    0.0407&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.99%&	    80.37%&	    80.45%&	    66.67%&
+     Tube_L1&	      0.0714&	    0.0704&	    0.1007&	    0.0773&	    0.0310&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:01:44,797 | Updated smoothed statistics on Epoch [20]!
+2026-10-20 09:01:46,452 | Updated running statistics with Epoch [20] features!
+2026-10-20 09:01:46,454 | Updated smoothed statistics on Epoch [21]!
+2026-10-20 09:01:48,095 | Updated running statistics with Epoch [21] features!
+2026-10-20 09:01:48,096 | Updated smoothed statistics on Epoch [22]!
+2026-10-20 09:01:49,563 | Updated running statistics with Epoch [22] features!
+2026-10-20 09:01:49,564 | Updated smoothed statistics on Epoch [23]!
+2026-10-20 09:01:51,041 | Updated running statistics with Epoch [23] features!
+2026-10-20 09:01:51,042 | Updated smoothed statistics on Epoch [24]!
+2026-10-20 09:01:52,433 | Updated running statistics with Epoch [24] features!
+2026-10-20 09:01:52,435 | Updated smoothed statistics on Epoch [25]!
+2026-10-20 09:01:53,822 | Updated running statistics with Epoch [25] features!
+2026-10-20 09:01:53,823 | Updated smoothed statistics on Epoch [26]!
+2026-10-20 09:01:55,262 | Updated running statistics with Epoch [26] features!
+2026-10-20 09:01:55,263 | Updated smoothed statistics on Epoch [27]!
+2026-10-20 09:01:56,739 | Updated running statistics with Epoch [27] features!
+2026-10-20 09:01:56,741 | Updated smoothed statistics on Epoch [28]!
+2026-10-20 09:01:58,203 | Updated running statistics with Epoch [28] features!
+2026-10-20 09:01:58,204 | Updated smoothed statistics on Epoch [29]!
+2026-10-20 09:01:59,543 | Updated running statistics with Epoch [29] features!
+2026-10-20 09:01:59,544 | Updated smoothed statistics on Epoch [30]!
+2026-10-20 09:02:01,007 | Updated running statistics with Epoch [30] features!
+2026-10-20 09:02:01,008 | Updated smoothed statistics on Epoch [31]!
+2026-10-20 09:02:02,544 | Updated running statistics with Epoch [31] features!
+2026-10-20 09:02:02,545 | Updated smoothed statistics on Epoch [32]!
+2026-10-20 09:02:03,979 | Updated running statistics with Epoch [32] features!
+2026-10-20 09:02:03,980 | Updated smoothed statistics on Epoch [33]!
+2026-10-20 09:02:05,374 | Updated running statistics with Epoch [33] features!
+2026-10-20 09:02:05,375 | Updated smoothed statistics on Epoch [34]!
+2026-10-20 09:02:06,674 | Updated running statistics with Epoch [34] features!
+2026-10-20 09:02:06,675 | Updated smoothed statistics on Epoch [35]!
+2026-10-20 09:02:07,990 | Updated running statistics with Epoch [35] features!
+2026-10-20 09:02:07,991 | Updated smoothed statistics on Epoch [36]!
+2026-10-20 09:02:09,249 | Updated running statistics with Epoch [36] features!
+2026-10-20 09:02:09,250 | Updated smoothed statistics on Epoch [37]!
+2026-10-20 09:02:10,593 | Updated running statistics with Epoch [37] features!
+2026-10-20 09:02:10,594 | Updated smoothed statistics on Epoch [38]!
+2026-10-20 09:02:11,883 | Updated running statistics with Epoch [38] features!
+2026-10-20 09:02:11,884 | Updated smoothed statistics on Epoch [39]!
+2026-10-20 09:02:13,297 | Updated running statistics with Epoch [39] features!
+2026-10-20 09:02:13,333 | [Val Epoch 40] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4282)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    78.03%&	    83.05%&	    76.82%&	    76.67%&
+     Tube_L1&	      0.0788&	    0.0849&	    0.1109&	    0.1009&	    0.0290&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.95%&	    82.67%&	    76.82%&	    76.67%&
+     Tube_L1&	      0.0800&	    0.0803&	    0.1132&	    0.0928&	    0.0263&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    79.03%&	    83.05%&	    78.64%&	    76.67%&
+     Tube_L1&	      0.0737&	    0.0775&	    0.1033&	    0.0885&	    0.0327&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    78.03%&	    83.05%&	    76.82%&	    76.67%&
+     Tube_L1&	      0.0774&	    0.0835&	    0.1073&	    0.0988&	    0.0307&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:02:13,334 | Updated smoothed statistics on Epoch [40]!
+2026-10-20 09:02:14,797 | Updated running statistics with Epoch [40] features!
+2026-10-20 09:02:14,799 | Updated smoothed statistics on Epoch [41]!
+2026-10-20 09:02:16,256 | Updated running statistics with Epoch [41] features!
+2026-10-20 09:02:16,257 | Updated smoothed statistics on Epoch [42]!
+2026-10-20 09:02:17,859 | Updated running statistics with Epoch [42] features!
+2026-10-20 09:02:17,860 | Updated smoothed statistics on Epoch [43]!
+2026-10-20 09:02:19,425 | Updated running statistics with Epoch [43] features!
+2026-10-20 09:02:19,426 | Updated smoothed statistics on Epoch [44]!
+2026-10-20 09:02:20,781 | Updated running statistics with Epoch [44] features!
+2026-10-20 09:02:20,783 | Updated smoothed statistics on Epoch [45]!
+2026-10-20 09:02:22,118 | Updated running statistics with Epoch [45] features!
+2026-10-20 09:02:22,118 | Updated smoothed statistics on Epoch [46]!
+2026-10-20 09:02:23,408 | Updated running statistics with Epoch [46] features!
+2026-10-20 09:02:23,409 | Updated smoothed statistics on Epoch [47]!
+2026-10-20 09:02:24,781 | Updated running statistics with Epoch [47] features!
+2026-10-20 09:02:24,782 | Updated smoothed statistics on Epoch [48]!
+2026-10-20 09:02:26,384 | Updated running statistics with Epoch [48] features!
+2026-10-20 09:02:26,385 | Updated smoothed statistics on Epoch [49]!
+2026-10-20 09:02:27,760 | Updated running statistics with Epoch [49] features!
+2026-10-20 09:02:27,761 | Updated smoothed statistics on Epoch [50]!
+2026-10-20 09:02:29,125 | Updated running statistics with Epoch [50] features!
+2026-10-20 09:02:29,126 | Updated smoothed statistics on Epoch [51]!
+2026-10-20 09:02:30,555 | Updated running statistics with Epoch [51] features!
+2026-10-20 09:02:30,556 | Updated smoothed statistics on Epoch [52]!
+2026-10-20 09:02:31,820 | Updated running statistics with Epoch [52] features!
+2026-10-20 09:02:31,821 | Updated smoothed statistics on Epoch [53]!
+2026-10-20 09:02:33,087 | Updated running statistics with Epoch [53] features!
+2026-10-20 09:02:33,088 | Updated smoothed statistics on Epoch [54]!
+2026-10-20 09:02:34,364 | Updated running statistics with Epoch [54] features!
+2026-10-20 09:02:34,365 | Updated smoothed statistics on Epoch [55]!
+2026-10-20 09:02:35,726 | Updated running statistics with Epoch [55] features!
+2026-10-20 09:02:35,727 | Updated smoothed statistics on Epoch [56]!
+2026-10-20 09:02:37,031 | Updated running statistics with Epoch [56] features!
+2026-10-20 09:02:37,032 | Updated smoothed statistics on Epoch [57]!
+2026-10-20 09:02:38,325 | Updated running statistics with Epoch [57] features!
+2026-10-20 09:02:38,326 | Updated smoothed statistics on Epoch [58]!
+2026-10-20 09:02:39,616 | Updated running statistics with Epoch [58] features!
+2026-10-20 09:02:39,617 | Updated smoothed statistics on Epoch [59]!
+2026-10-20 09:02:41,149 | Updated running statistics with Epoch [59] features!
+2026-10-20 09:02:41,181 | [Val Epoch 60] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4309)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    76.61%&	    83.05%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0837&	    0.0849&	    0.1347&	    0.0950&	    0.0230&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    76.61%&	    83.05%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0832&	    0.0830&	    0.1342&	    0.0944&	    0.0170&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    76.38%&	    81.91%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0795&	    0.0789&	    0.1260&	    0.0871&	    0.0233&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    76.61%&	    83.05%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0821&	    0.0825&	    0.1312&	    0.0933&	    0.0200&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:02:41,182 | Updated smoothed statistics on Epoch [60]!
+2026-10-20 09:02:42,552 | Updated running statistics with Epoch [60] features!
+2026-10-20 09:02:42,553 | Updated smoothed statistics on Epoch [61]!
+2026-10-20 09:02:44,023 | Updated running statistics with Epoch [61] features!
+2026-10-20 09:02:44,024 | Updated smoothed statistics on Epoch [62]!
+2026-10-20 09:02:45,420 | Updated running statistics with Epoch [62] features!
+2026-10-20 09:02:45,421 | Updated smoothed statistics on Epoch [63]!
+2026-10-20 09:02:46,937 | Updated running statistics with Epoch [63] features!
+2026-10-20 09:02:46,938 | Updated smoothed statistics on Epoch [64]!
+2026-10-20 09:02:48,303 | Updated running statistics with Epoch [64] features!
+2026-10-20 09:02:48,304 | Updated smoothed statistics on Epoch [65]!
+2026-10-20 09:02:49,664 | Updated running statistics with Epoch [65] features!
+2026-10-20 09:02:49,665 | Updated smoothed statistics on Epoch [66]!
+2026-10-20 09:02:51,099 | Updated running statistics with Epoch [66] features!
+2026-10-20 09:02:51,100 | Updated smoothed statistics on Epoch [67]!
+2026-10-20 09:02:52,534 | Updated running statistics with Epoch [67] features!
+2026-10-20 09:02:52,534 | Updated smoothed statistics on Epoch [68]!
+2026-10-20 09:02:53,808 | Updated running statistics with Epoch [68] features!
+2026-10-20 09:02:53,809 | Updated smoothed statistics on Epoch [69]!
+2026-10-20 09:02:55,229 | Updated running statistics with Epoch [69] features!
+2026-10-20 09:02:55,230 | Updated smoothed statistics on Epoch [70]!
+2026-10-20 09:02:56,652 | Updated running statistics with Epoch [70] features!
+2026-10-20 09:02:56,653 | Updated smoothed statistics on Epoch [71]!
+2026-10-20 09:02:58,098 | Updated running statistics with Epoch [71] features!
+2026-10-20 09:02:58,099 | Updated smoothed statistics on Epoch [72]!
+2026-10-20 09:02:59,361 | Updated running statistics with Epoch [72] features!
+2026-10-20 09:02:59,362 | Updated smoothed statistics on Epoch [73]!
+2026-10-20 09:03:00,747 | Updated running statistics with Epoch [73] features!
+2026-10-20 09:03:00,749 | Updated smoothed statistics on Epoch [74]!
+2026-10-20 09:03:02,279 | Updated running statistics with Epoch [74] features!
+2026-10-20 09:03:02,280 | Updated smoothed statistics on Epoch [75]!
+2026-10-20 09:03:03,586 | Updated running statistics with Epoch [75] features!
+2026-10-20 09:03:03,587 | Updated smoothed statistics on Epoch [76]!
+2026-10-20 09:03:04,871 | Updated running statistics with Epoch [76] features!
+2026-10-20 09:03:04,872 | Updated smoothed statistics on Epoch [77]!
+2026-10-20 09:03:06,111 | Updated running statistics with Epoch [77] features!
+2026-10-20 09:03:06,112 | Updated smoothed statistics on Epoch [78]!
+2026-10-20 09:03:07,438 | Updated running statistics with Epoch [78] features!
+2026-10-20 09:03:07,439 | Updated smoothed statistics on Epoch [79]!
+2026-10-20 09:03:08,915 | Updated running statistics with Epoch [79] features!
+2026-10-20 09:03:08,933 | [Val Epoch 80] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4200)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    77.61%&	    83.05%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0777&	    0.0825&	    0.1204&	    0.0941&	    0.0267&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.53%&	    82.67%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0778&	    0.0842&	    0.1170&	    0.0949&	    0.0343&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    75.16%&	    82.06%&	    75.00%&	    70.00%&
+     Tube_L1&	      0.0746&	    0.0773&	    0.1150&	    0.0850&	    0.0300&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.49%&	    82.44%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0774&	    0.0817&	    0.1186&	    0.0928&	    0.0280&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:03:08,937 | Now testing on the test set
+2026-10-20 09:03:08,960 | [Test] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4077)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    81.03%&	    78.89%&	    76.21%&	    93.33%&
+     Tube_L1&	      0.0657&	    0.0783&	    0.1015&	    0.1008&	    0.0100&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    81.23%&	    79.91%&	    76.21%&	    93.33%&
+     Tube_L1&	      0.0688&	    0.0763&	    0.1086&	    0.0947&	    0.0100&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    81.52%&	    76.34%&	    78.03%&	    93.33%&
+     Tube_L1&	      0.0616&	    0.0666&	    0.1001&	    0.0832&	    0.0033&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    80.52%&	    76.34%&	    76.21%&	    93.33%&
+     Tube_L1&	      0.0655&	    0.0736&	    0.1018&	    0.0932&	    0.0080&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:03:09,124 | 
+==========================================
+2026-10-20 09:03:09,125 |    HCA [LDS_FDS_RANKSIM] (adjcls) Final Alignment Results (Epoch 80)
+2026-10-20 09:03:09,125 | ==========================================
+2026-10-20 09:03:09,125 | [Training Set]   Interval Acc: 91.25% | Center RMSE: 0.3143
+2026-10-20 09:03:09,125 | [Validation Set] Interval Acc: 84.18% | Center RMSE: 0.4200
+2026-10-20 09:03:09,125 | [Test Set]       Interval Acc: 83.67% | Bal Acc: 81.23% | Center RMSE: 0.4077
+2026-10-20 09:03:09,125 | ==========================================
+2026-10-20 09:59:24,918 | =====> Pure Tabular HCA Ablation: [LDS_FDS_RANKSIM] | Args: Namespace(lds=True, lds_kernel='gaussian', lds_ks=5, lds_sigma=1.0, reweight='sqrt_inv', fds=True, fds_kernel='gaussian', fds_ks=5, fds_sigma=1.0, start_update=0, start_smooth=1, bucket_num=20, bucket_start=0, fds_mmt=0.9, ranksim=True, regularization_weight=0.5, interpolation_lambda=2.0, seed=42, tol=0.3, csv_path='./alpha_data.csv', raw_csv_path='./ALL_Best_Summary_ExtendedFeatures_Advanced.csv', batch_size=64, epochs=80, lr=0.002, weight_decay=0.001, feat_dim=256, dropout=0.25, temp=0.35, save_best=False, resume='', evaluate_only=False, plot_head='adjcls', save_dir='./checkpoints_ablation', log_dir='analy_log', log_name='ablation_hca.log', head_num=4)
+2026-10-20 09:59:24,947 | Using re-weighting: [SQRT_INV]
+2026-10-20 09:59:24,948 | Using LDS: [GAUSSIAN] (5/1.0)
+2026-10-20 09:59:25,090 | Using FDS: [GAUSSIAN] (5/1.0)
+2026-10-20 09:59:27,237 | Updated running statistics with Epoch [0] features!
+2026-10-20 09:59:27,292 | Updated smoothed statistics on Epoch [1]!
+2026-10-20 09:59:28,804 | Updated running statistics with Epoch [1] features!
+2026-10-20 09:59:28,805 | Updated smoothed statistics on Epoch [2]!
+2026-10-20 09:59:30,266 | Updated running statistics with Epoch [2] features!
+2026-10-20 09:59:30,267 | Updated smoothed statistics on Epoch [3]!
+2026-10-20 09:59:31,767 | Updated running statistics with Epoch [3] features!
+2026-10-20 09:59:31,768 | Updated smoothed statistics on Epoch [4]!
+2026-10-20 09:59:33,330 | Updated running statistics with Epoch [4] features!
+2026-10-20 09:59:33,331 | Updated smoothed statistics on Epoch [5]!
+2026-10-20 09:59:34,828 | Updated running statistics with Epoch [5] features!
+2026-10-20 09:59:34,830 | Updated smoothed statistics on Epoch [6]!
+2026-10-20 09:59:36,168 | Updated running statistics with Epoch [6] features!
+2026-10-20 09:59:36,169 | Updated smoothed statistics on Epoch [7]!
+2026-10-20 09:59:37,468 | Updated running statistics with Epoch [7] features!
+2026-10-20 09:59:37,469 | Updated smoothed statistics on Epoch [8]!
+2026-10-20 09:59:38,866 | Updated running statistics with Epoch [8] features!
+2026-10-20 09:59:38,867 | Updated smoothed statistics on Epoch [9]!
+2026-10-20 09:59:40,267 | Updated running statistics with Epoch [9] features!
+2026-10-20 09:59:40,268 | Updated smoothed statistics on Epoch [10]!
+2026-10-20 09:59:41,615 | Updated running statistics with Epoch [10] features!
+2026-10-20 09:59:41,616 | Updated smoothed statistics on Epoch [11]!
+2026-10-20 09:59:43,061 | Updated running statistics with Epoch [11] features!
+2026-10-20 09:59:43,063 | Updated smoothed statistics on Epoch [12]!
+2026-10-20 09:59:44,539 | Updated running statistics with Epoch [12] features!
+2026-10-20 09:59:44,540 | Updated smoothed statistics on Epoch [13]!
+2026-10-20 09:59:46,057 | Updated running statistics with Epoch [13] features!
+2026-10-20 09:59:46,058 | Updated smoothed statistics on Epoch [14]!
+2026-10-20 09:59:47,454 | Updated running statistics with Epoch [14] features!
+2026-10-20 09:59:47,455 | Updated smoothed statistics on Epoch [15]!
+2026-10-20 09:59:48,901 | Updated running statistics with Epoch [15] features!
+2026-10-20 09:59:48,902 | Updated smoothed statistics on Epoch [16]!
+2026-10-20 09:59:50,279 | Updated running statistics with Epoch [16] features!
+2026-10-20 09:59:50,280 | Updated smoothed statistics on Epoch [17]!
+2026-10-20 09:59:51,717 | Updated running statistics with Epoch [17] features!
+2026-10-20 09:59:51,718 | Updated smoothed statistics on Epoch [18]!
+2026-10-20 09:59:53,129 | Updated running statistics with Epoch [18] features!
+2026-10-20 09:59:53,130 | Updated smoothed statistics on Epoch [19]!
+2026-10-20 09:59:54,390 | Updated running statistics with Epoch [19] features!
+2026-10-20 09:59:54,409 | [Val Epoch 20] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4025)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.07%&	    80.74%&	    80.45%&	    66.67%&
+     Tube_L1&	      0.0702&	    0.0703&	    0.1026&	    0.0756&	    0.0327&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    75.94%&	    80.13%&	    78.64%&	    66.67%&
+     Tube_L1&	      0.0690&	    0.0680&	    0.0958&	    0.0775&	    0.0250&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.37%&	    82.29%&	    80.45%&	    66.67%&
+     Tube_L1&	      0.0699&	    0.0686&	    0.0943&	    0.0720&	    0.0407&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.99%&	    80.37%&	    80.45%&	    66.67%&
+     Tube_L1&	      0.0714&	    0.0704&	    0.1007&	    0.0773&	    0.0310&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 09:59:54,410 | Updated smoothed statistics on Epoch [20]!
+2026-10-20 09:59:55,646 | Updated running statistics with Epoch [20] features!
+2026-10-20 09:59:55,647 | Updated smoothed statistics on Epoch [21]!
+2026-10-20 09:59:57,227 | Updated running statistics with Epoch [21] features!
+2026-10-20 09:59:57,228 | Updated smoothed statistics on Epoch [22]!
+2026-10-20 09:59:58,716 | Updated running statistics with Epoch [22] features!
+2026-10-20 09:59:58,717 | Updated smoothed statistics on Epoch [23]!
+2026-10-20 10:00:00,185 | Updated running statistics with Epoch [23] features!
+2026-10-20 10:00:00,186 | Updated smoothed statistics on Epoch [24]!
+2026-10-20 10:00:01,664 | Updated running statistics with Epoch [24] features!
+2026-10-20 10:00:01,666 | Updated smoothed statistics on Epoch [25]!
+2026-10-20 10:00:03,115 | Updated running statistics with Epoch [25] features!
+2026-10-20 10:00:03,115 | Updated smoothed statistics on Epoch [26]!
+2026-10-20 10:00:04,532 | Updated running statistics with Epoch [26] features!
+2026-10-20 10:00:04,533 | Updated smoothed statistics on Epoch [27]!
+2026-10-20 10:00:05,877 | Updated running statistics with Epoch [27] features!
+2026-10-20 10:00:05,878 | Updated smoothed statistics on Epoch [28]!
+2026-10-20 10:00:07,218 | Updated running statistics with Epoch [28] features!
+2026-10-20 10:00:07,219 | Updated smoothed statistics on Epoch [29]!
+2026-10-20 10:00:08,630 | Updated running statistics with Epoch [29] features!
+2026-10-20 10:00:08,631 | Updated smoothed statistics on Epoch [30]!
+2026-10-20 10:00:10,062 | Updated running statistics with Epoch [30] features!
+2026-10-20 10:00:10,063 | Updated smoothed statistics on Epoch [31]!
+2026-10-20 10:00:11,475 | Updated running statistics with Epoch [31] features!
+2026-10-20 10:00:11,476 | Updated smoothed statistics on Epoch [32]!
+2026-10-20 10:00:12,877 | Updated running statistics with Epoch [32] features!
+2026-10-20 10:00:12,879 | Updated smoothed statistics on Epoch [33]!
+2026-10-20 10:00:14,227 | Updated running statistics with Epoch [33] features!
+2026-10-20 10:00:14,228 | Updated smoothed statistics on Epoch [34]!
+2026-10-20 10:00:15,682 | Updated running statistics with Epoch [34] features!
+2026-10-20 10:00:15,683 | Updated smoothed statistics on Epoch [35]!
+2026-10-20 10:00:17,038 | Updated running statistics with Epoch [35] features!
+2026-10-20 10:00:17,039 | Updated smoothed statistics on Epoch [36]!
+2026-10-20 10:00:18,338 | Updated running statistics with Epoch [36] features!
+2026-10-20 10:00:18,339 | Updated smoothed statistics on Epoch [37]!
+2026-10-20 10:00:19,820 | Updated running statistics with Epoch [37] features!
+2026-10-20 10:00:19,821 | Updated smoothed statistics on Epoch [38]!
+2026-10-20 10:00:21,114 | Updated running statistics with Epoch [38] features!
+2026-10-20 10:00:21,115 | Updated smoothed statistics on Epoch [39]!
+2026-10-20 10:00:22,419 | Updated running statistics with Epoch [39] features!
+2026-10-20 10:00:22,446 | [Val Epoch 40] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4282)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    78.03%&	    83.05%&	    76.82%&	    76.67%&
+     Tube_L1&	      0.0788&	    0.0849&	    0.1109&	    0.1009&	    0.0290&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.95%&	    82.67%&	    76.82%&	    76.67%&
+     Tube_L1&	      0.0800&	    0.0803&	    0.1132&	    0.0928&	    0.0263&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      85.20%&	    79.03%&	    83.05%&	    78.64%&	    76.67%&
+     Tube_L1&	      0.0737&	    0.0775&	    0.1033&	    0.0885&	    0.0327&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    78.03%&	    83.05%&	    76.82%&	    76.67%&
+     Tube_L1&	      0.0774&	    0.0835&	    0.1073&	    0.0988&	    0.0307&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 10:00:22,447 | Updated smoothed statistics on Epoch [40]!
+2026-10-20 10:00:23,865 | Updated running statistics with Epoch [40] features!
+2026-10-20 10:00:23,866 | Updated smoothed statistics on Epoch [41]!
+2026-10-20 10:00:25,440 | Updated running statistics with Epoch [41] features!
+2026-10-20 10:00:25,441 | Updated smoothed statistics on Epoch [42]!
+2026-10-20 10:00:26,910 | Updated running statistics with Epoch [42] features!
+2026-10-20 10:00:26,911 | Updated smoothed statistics on Epoch [43]!
+2026-10-20 10:00:28,423 | Updated running statistics with Epoch [43] features!
+2026-10-20 10:00:28,424 | Updated smoothed statistics on Epoch [44]!
+2026-10-20 10:00:30,013 | Updated running statistics with Epoch [44] features!
+2026-10-20 10:00:30,014 | Updated smoothed statistics on Epoch [45]!
+2026-10-20 10:00:31,454 | Updated running statistics with Epoch [45] features!
+2026-10-20 10:00:31,455 | Updated smoothed statistics on Epoch [46]!
+2026-10-20 10:00:32,845 | Updated running statistics with Epoch [46] features!
+2026-10-20 10:00:32,846 | Updated smoothed statistics on Epoch [47]!
+2026-10-20 10:00:34,251 | Updated running statistics with Epoch [47] features!
+2026-10-20 10:00:34,252 | Updated smoothed statistics on Epoch [48]!
+2026-10-20 10:00:35,770 | Updated running statistics with Epoch [48] features!
+2026-10-20 10:00:35,771 | Updated smoothed statistics on Epoch [49]!
+2026-10-20 10:00:37,212 | Updated running statistics with Epoch [49] features!
+2026-10-20 10:00:37,213 | Updated smoothed statistics on Epoch [50]!
+2026-10-20 10:00:38,652 | Updated running statistics with Epoch [50] features!
+2026-10-20 10:00:38,653 | Updated smoothed statistics on Epoch [51]!
+2026-10-20 10:00:40,160 | Updated running statistics with Epoch [51] features!
+2026-10-20 10:00:40,161 | Updated smoothed statistics on Epoch [52]!
+2026-10-20 10:00:41,612 | Updated running statistics with Epoch [52] features!
+2026-10-20 10:00:41,613 | Updated smoothed statistics on Epoch [53]!
+2026-10-20 10:00:43,072 | Updated running statistics with Epoch [53] features!
+2026-10-20 10:00:43,073 | Updated smoothed statistics on Epoch [54]!
+2026-10-20 10:00:44,411 | Updated running statistics with Epoch [54] features!
+2026-10-20 10:00:44,412 | Updated smoothed statistics on Epoch [55]!
+2026-10-20 10:00:45,875 | Updated running statistics with Epoch [55] features!
+2026-10-20 10:00:45,876 | Updated smoothed statistics on Epoch [56]!
+2026-10-20 10:00:47,216 | Updated running statistics with Epoch [56] features!
+2026-10-20 10:00:47,217 | Updated smoothed statistics on Epoch [57]!
+2026-10-20 10:00:48,539 | Updated running statistics with Epoch [57] features!
+2026-10-20 10:00:48,540 | Updated smoothed statistics on Epoch [58]!
+2026-10-20 10:00:49,821 | Updated running statistics with Epoch [58] features!
+2026-10-20 10:00:49,822 | Updated smoothed statistics on Epoch [59]!
+2026-10-20 10:00:51,091 | Updated running statistics with Epoch [59] features!
+2026-10-20 10:00:51,118 | [Val Epoch 60] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4309)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    76.61%&	    83.05%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0837&	    0.0849&	    0.1347&	    0.0950&	    0.0230&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    76.61%&	    83.05%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0832&	    0.0830&	    0.1342&	    0.0944&	    0.0170&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    76.38%&	    81.91%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0795&	    0.0789&	    0.1260&	    0.0871&	    0.0233&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    76.61%&	    83.05%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0821&	    0.0825&	    0.1312&	    0.0933&	    0.0200&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 10:00:51,119 | Updated smoothed statistics on Epoch [60]!
+2026-10-20 10:00:52,461 | Updated running statistics with Epoch [60] features!
+2026-10-20 10:00:52,462 | Updated smoothed statistics on Epoch [61]!
+2026-10-20 10:00:54,016 | Updated running statistics with Epoch [61] features!
+2026-10-20 10:00:54,017 | Updated smoothed statistics on Epoch [62]!
+2026-10-20 10:00:55,379 | Updated running statistics with Epoch [62] features!
+2026-10-20 10:00:55,380 | Updated smoothed statistics on Epoch [63]!
+2026-10-20 10:00:56,872 | Updated running statistics with Epoch [63] features!
+2026-10-20 10:00:56,873 | Updated smoothed statistics on Epoch [64]!
+2026-10-20 10:00:58,240 | Updated running statistics with Epoch [64] features!
+2026-10-20 10:00:58,241 | Updated smoothed statistics on Epoch [65]!
+2026-10-20 10:00:59,737 | Updated running statistics with Epoch [65] features!
+2026-10-20 10:00:59,738 | Updated smoothed statistics on Epoch [66]!
+2026-10-20 10:01:01,065 | Updated running statistics with Epoch [66] features!
+2026-10-20 10:01:01,066 | Updated smoothed statistics on Epoch [67]!
+2026-10-20 10:01:02,570 | Updated running statistics with Epoch [67] features!
+2026-10-20 10:01:02,571 | Updated smoothed statistics on Epoch [68]!
+2026-10-20 10:01:03,898 | Updated running statistics with Epoch [68] features!
+2026-10-20 10:01:03,899 | Updated smoothed statistics on Epoch [69]!
+2026-10-20 10:01:05,280 | Updated running statistics with Epoch [69] features!
+2026-10-20 10:01:05,281 | Updated smoothed statistics on Epoch [70]!
+2026-10-20 10:01:06,599 | Updated running statistics with Epoch [70] features!
+2026-10-20 10:01:06,600 | Updated smoothed statistics on Epoch [71]!
+2026-10-20 10:01:07,991 | Updated running statistics with Epoch [71] features!
+2026-10-20 10:01:07,992 | Updated smoothed statistics on Epoch [72]!
+2026-10-20 10:01:09,343 | Updated running statistics with Epoch [72] features!
+2026-10-20 10:01:09,344 | Updated smoothed statistics on Epoch [73]!
+2026-10-20 10:01:10,740 | Updated running statistics with Epoch [73] features!
+2026-10-20 10:01:10,741 | Updated smoothed statistics on Epoch [74]!
+2026-10-20 10:01:12,154 | Updated running statistics with Epoch [74] features!
+2026-10-20 10:01:12,156 | Updated smoothed statistics on Epoch [75]!
+2026-10-20 10:01:13,543 | Updated running statistics with Epoch [75] features!
+2026-10-20 10:01:13,544 | Updated smoothed statistics on Epoch [76]!
+2026-10-20 10:01:14,916 | Updated running statistics with Epoch [76] features!
+2026-10-20 10:01:14,917 | Updated smoothed statistics on Epoch [77]!
+2026-10-20 10:01:16,188 | Updated running statistics with Epoch [77] features!
+2026-10-20 10:01:16,190 | Updated smoothed statistics on Epoch [78]!
+2026-10-20 10:01:17,494 | Updated running statistics with Epoch [78] features!
+2026-10-20 10:01:17,495 | Updated smoothed statistics on Epoch [79]!
+2026-10-20 10:01:18,829 | Updated running statistics with Epoch [79] features!
+2026-10-20 10:01:18,847 | [Val Epoch 80] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4200)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.69%&	    77.61%&	    83.05%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0777&	    0.0825&	    0.1204&	    0.0941&	    0.0267&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    77.53%&	    82.67%&	    79.09%&	    70.00%&
+     Tube_L1&	      0.0778&	    0.0842&	    0.1170&	    0.0949&	    0.0343&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    75.16%&	    82.06%&	    75.00%&	    70.00%&
+     Tube_L1&	      0.0746&	    0.0773&	    0.1150&	    0.0850&	    0.0300&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    76.49%&	    82.44%&	    77.27%&	    70.00%&
+     Tube_L1&	      0.0774&	    0.0817&	    0.1186&	    0.0928&	    0.0280&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 10:01:18,851 | Now testing on the test set
+2026-10-20 10:01:18,877 | [Test] Interval Accuracy (+-0.30) & Tube_L1 (Center RMSE: 0.4077)
+<singlecls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      84.18%&	    81.03%&	    78.89%&	    76.21%&	    93.33%&
+     Tube_L1&	      0.0657&	    0.0783&	    0.1015&	    0.1008&	    0.0100&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<adjcls> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.67%&	    81.23%&	    79.91%&	    76.21%&	    93.33%&
+     Tube_L1&	      0.0688&	    0.0763&	    0.1086&	    0.0947&	    0.0100&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combadd> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      83.16%&	    81.52%&	    76.34%&	    78.03%&	    93.33%&
+     Tube_L1&	      0.0616&	    0.0666&	    0.1001&	    0.0832&	    0.0033&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+<combmul> 
+     Metrics&	 Raw_Overall&	   Bal_All&	      Many&	    Medium&	       Few&
+  Int_Acc(%)&	      82.65%&	    80.52%&	    76.34%&	    76.21%&	    93.33%&
+     Tube_L1&	      0.0655&	    0.0736&	    0.1018&	    0.0932&	    0.0080&
+-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+==================================================
+
+2026-10-20 10:01:19,044 | 
+==========================================
+2026-10-20 10:01:19,044 |    HCA [LDS_FDS_RANKSIM] (singlecls) Final Alignment Results (Epoch 80)
+2026-10-20 10:01:19,044 | ==========================================
+2026-10-20 10:01:19,045 | [Training Set]   Interval Acc: 91.31% | Center RMSE: 0.3147
+2026-10-20 10:01:19,045 | [Validation Set] Interval Acc: 84.18% | Center RMSE: 0.4176
+2026-10-20 10:01:19,045 | [Test Set]       Interval Acc: 84.18% | Bal Acc: 81.03% | Center RMSE: 0.4030
+2026-10-20 10:01:19,045 | ==========================================
+2026-10-20 10:01:19,218 | 
+==========================================
+2026-10-20 10:01:19,218 |    HCA [LDS_FDS_RANKSIM] (adjcls) Final Alignment Results (Epoch 80)
+2026-10-20 10:01:19,218 | ==========================================
+2026-10-20 10:01:19,218 | [Training Set]   Interval Acc: 91.25% | Center RMSE: 0.3143
+2026-10-20 10:01:19,218 | [Validation Set] Interval Acc: 84.18% | Center RMSE: 0.4200
+2026-10-20 10:01:19,218 | [Test Set]       Interval Acc: 83.67% | Bal Acc: 81.23% | Center RMSE: 0.4077
+2026-10-20 10:01:19,219 | ==========================================
+2026-10-20 10:01:23,013 | 
+==========================================
+2026-10-20 10:01:23,013 |    HCA [LDS_FDS_RANKSIM] (combadd) Final Alignment Results (Epoch 80)
+2026-10-20 10:01:23,013 | ==========================================
+2026-10-20 10:01:23,013 | [Training Set]   Interval Acc: 89.97% | Center RMSE: 0.3130
+2026-10-20 10:01:23,014 | [Validation Set] Interval Acc: 82.65% | Center RMSE: 0.4106
+2026-10-20 10:01:23,014 | [Test Set]       Interval Acc: 83.16% | Bal Acc: 81.52% | Center RMSE: 0.3888
+2026-10-20 10:01:23,014 | ==========================================
+2026-10-20 10:01:23,276 | 
+==========================================
+2026-10-20 10:01:23,276 |    HCA [LDS_FDS_RANKSIM] (combmul) Final Alignment Results (Epoch 80)
+2026-10-20 10:01:23,276 | ==========================================
+2026-10-20 10:01:23,276 | [Training Set]   Interval Acc: 90.48% | Center RMSE: 0.3169
+2026-10-20 10:01:23,276 | [Validation Set] Interval Acc: 83.67% | Center RMSE: 0.4170
+2026-10-20 10:01:23,276 | [Test Set]       Interval Acc: 82.65% | Bal Acc: 80.52% | Center RMSE: 0.4004
+2026-10-20 10:01:23,277 | ==========================================
